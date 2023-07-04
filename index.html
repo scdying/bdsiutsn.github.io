@@ -29,15 +29,6 @@
     <meta name="og:image:height" content="">
 </head>
 
-<script>
-    const menukylian = document.querySelector(".menu-kylian")
-    const navLinks = document.querySelector(".nav-links")
-
-    menukylian.addEventListener('click', () => {
-        navLinks.classList.toggle('mobile-menu')
-    })
-</script>
-
 <body>
     <script src="./table/jquery-1.9.1.js"></script>
     <script src="./table/jquery-ui.js"></script>
@@ -48,18 +39,9 @@
     <link href="./table/jquery.dataTables.css" rel="stylesheet" />
     <link href="./table/jquery-ui.css" rel="stylesheet" />
 
-    <script type="text/javascript" charset="utf-8">
-        $(document).ready(function () {
-            $('#example').DataTable({
-                responsive: true,
-                pagingType: "simple",
-                pageLength: 10
-            })
-        });
-    </script>
-
     <header>
         <h1 class="logo">BDS</h1>
+        <img src="./img/bds.png" class="bdslogo"> </img>
         <nav class="nav-area">
             <button aria-label="toggle menu" id="responsiveMenuToggleButton">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -75,15 +57,19 @@
 
             <div class="nav-links">
                 <ul>
-                    <li><a href="#top" class="not_link_style">Accueil</a></li>
-                    <li><a href="/bdsiutsn.github.io/association.html" class="not_link_style" bis_skin_checked="1">L'association</a></li>
-                    <li><a href="/bdsiutsn.github.io/classements.html" class="not_link_style" bis_skin_checked="1">Classements</a></li>
-                    <li><a href="/bdsiutsn.github.io/actus.html" class="not_link_style" bis_skin_checked="1">Nos actus</a></li>
-                    <li><a href="/bdsiutsn.github.io/etudiants.html" class="not_link_style" bis_skin_checked="1">Etudiants</a></li>
+                    <li><a href="/bdsiutsn.github.io/index.html" class="not_link_style">Accueil</a></li>
+                    <li><a href="/bdsiutsn.github.io/association.html" class="not_link_style"
+                            bis_skin_checked="1">L'association</a></li>
+                    <li><a href="/bdsiutsn.github.io/classements.html" class="not_link_style"
+                            bis_skin_checked="1">Classements</a></li>
+                    <li><a href="/bdsiutsn.github.io/actus.html" class="not_link_style" bis_skin_checked="1">Nos
+                            actus</a></li>
+                    <li><a href="#top" class="not_link_style" bis_skin_checked="1">Etudiants</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+
 </body>
 
 </html>
