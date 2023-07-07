@@ -1,20 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
+    <script src="./table/jquery-1.9.1.js"></script>
+    <script src="./table/jquery-ui.js"></script>
+    <script src="./app.js" defer></script>
+    <script src="./table/jquery.dataTables.min.js"></script>
+    <script src="./table/dataTables.responsive.js"></script>
+    <link href="./table/dataTables.responsive.css" rel="stylesheet" />
+    <link href="./table/jquery.dataTables.css" rel="stylesheet" />
+    <link href="./table/jquery-ui.js" rel="stylesheet" />
+    <link href="/style.css" rel="stylesheet" />
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" type="text/css" href="./style.css">
     <link rel="shortcut icon" href="./img/bds.png">
 
     <meta name="fragment" content="!">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="content-language" content="fr">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 
-    <title>BDS - Actus</title>
+    <title>BDS - Actualités</title>
     <meta name="description" content="">
 
     <meta name="author" content="Bureau des Sports IUT Saint-Nazaire">
@@ -27,49 +35,61 @@
     <meta name="og:image" content="">
     <meta name="og:image:width" content="">
     <meta name="og:image:height" content="">
+
+
 </head>
 
 <body>
-    <script src="./table/jquery-1.9.1.js"></script>
-    <script src="./table/jquery-ui.js"></script>
-    <script src="./app.js" defer></script>
-    <script src="./table/jquery.dataTables.min.js"></script>
-    <script src="./table/dataTables.responsive.js"></script>
-    <link href="./table/dataTables.responsive.css" rel="stylesheet" />
-    <link href="./table/jquery.dataTables.css" rel="stylesheet" />
-    <link href="./table/jquery-ui.css" rel="stylesheet" />
-
-    <header>
-        <h1 class="logo" href="#top">BDS</h1>
-        <img src="./img/bds.png" class="bdslogo"> </img>
-        <nav class="nav-area">
-            <button aria-label="toggle menu" id="responsiveMenuToggleButton">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="openIcon">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="closeIcon">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
-
-            <div class="nav-links">
-                <ul>
-                    <li><a href="/bdsiutsn.github.io/index.html" class="not_link_style">Accueil</a></li>
-                    <li><a href="/bdsiutsn.github.io/association.html" class="not_link_style"
-                            bis_skin_checked="1">L'association</a></li>
-                    <li><a href="/bdsiutsn.github.io/classements.html" class="not_link_style"
-                            bis_skin_checked="1">Classements</a></li>
-                    <li><a href="#top" class="not_link_style" bis_skin_checked="1">Nos
-                            actus</a></li>
-                    <li><a href="/bdsiutsn.github.io/etudiants.html" class="not_link_style" bis_skin_checked="1">Etudiants</a></li>
-                </ul>
+    <header id="nav-menu" aria-label="navigation bar">
+        <div class="container">
+            <a class="logo" href="/">
+                <img src="/img/bds.png" width="60" height="60" alt="Inc Logo" />
+            </a>
+            <div class="nav-start">
+                <nav class="menu">
+                    <ul class="menu-bar">
+                        <li><a class="nav-link" href="/index.html">Accueil</a></li>
+                        <li><a class="nav-link" href="/association.html">L'association</a></li>
+                        <li>
+                            <button class="nav-link dropdown-btn" data-dropdown="dropdown2" aria-haspopup="true"
+                                aria-expanded="false" aria-label="discover">
+                                Classements
+                                <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                            </button>
+                            <div id="dropdown2" class="dropdown">
+                                <ul role="menu">
+                                    <li role="menuitem">
+                                        <a class="dropdown-link" href="/classements/equipes.html">Classements des
+                                            équipes</a>
+                                    </li>
+                                    <li role="menuitem">
+                                        <a class="dropdown-link" href="/classements/promo.html">Classements des
+                                            promotions</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a class="nav-link" href="#top">Nos actus</a></li>
+                        <li><a class="nav-link" href="/etudiants.html">Etudiants</a></li>
+                    </ul>
+                </nav>
             </div>
-        </nav>
+
+            <div class="nav-end">
+                <button id="hamburger" aria-label="hamburger" aria-haspopup="true" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="openIcon">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+        </div>
     </header>
 
+    <!-- Page markup: Not important -->
+    <main style="padding: 1.5rem; margin: 0 auto; max-width: 1300px">
+    </main>
 </body>
 
 </html>
