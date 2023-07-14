@@ -61,7 +61,6 @@ button {
 }
 
 .logo {
-    margin-right: 1.5rem;
     float: left;
 }
 
@@ -249,9 +248,8 @@ br {
 @media (max-width: 900px) {
 
     .logo {
-        margin-right: 1.5rem;
         float: left;
-        text-indent: -125px;
+        text-indent: -140px;
     }
 
     #hamburger {
