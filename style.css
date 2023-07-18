@@ -184,6 +184,7 @@ h3 {
     visibility: visible;
     opacity: 1;
     transform: scale(1) translateX(5px);
+    
 }
 
 .dropdown ul {
