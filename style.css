@@ -69,7 +69,7 @@ button {
 }
 
 h1 {
-    text-align: left;
+    text-align: center;
     line-height: 50px;
     font-size: 2rem;
 }
@@ -94,6 +94,10 @@ li{
     line-height: 30px;
     font-size: 1rem;
     font-weight:normal
+}
+
+.missions li::marker {
+    color: rgb(19, 16, 206);
 }
 
 h3 {
