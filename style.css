@@ -33,14 +33,15 @@ ul {
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: white;
+
 }
 
 button {
     border: none;
     background-color: transparent;
     cursor: pointer;
-    color: inherit;
+    color: white;
 }
 
 .btn {
@@ -96,10 +97,6 @@ li{
     font-weight:normal
 }
 
-.missions li::marker {
-    color: rgb(19, 16, 206);
-}
-
 h3 {
     text-decoration: none;
     color: inherit;
@@ -119,7 +116,7 @@ h3 {
     column-gap: 2rem;
     height: 90px;
     padding: 1.2rem 3rem;
-    background-color: beige;
+    background-color: #292c2f;
 }
 
 .menu {
@@ -165,14 +162,14 @@ h3 {
 .right-container .search {
     display: flex;
     align-items: center;
-    background-color: beige;
+    background-color: #292c2f;
 }
 
 .dropdown {
     display: flex;
     flex-direction: column;
     min-width: 230px;
-    background-color: beige;
+    background-color: #292c2f;
     border-radius: 10px;
     position: absolute;
     top: 36px;
@@ -267,7 +264,7 @@ h3 {
 #hamburger svg {
     height: 3rem;
     width: 3rem;
-    color: var(--nav-text-hover-color);
+    color: white;
     position: absolute;
     top: 0.75rem;
     right: 0.75rem;
