@@ -89,12 +89,12 @@ display: block;
 font-size: 24%;
 }*/
 
-li{
+li {
     text-decoration: none;
     color: inherit;
     line-height: 30px;
     font-size: 1rem;
-    font-weight:normal
+    font-weight: normal
 }
 
 h3 {
@@ -102,7 +102,7 @@ h3 {
     color: inherit;
     line-height: 30px;
     font-size: 1rem;
-    font-weight:normal
+    font-weight: normal
 }
 
 .missions-suaps {
@@ -278,6 +278,19 @@ br {
     user-select: none;
 }
 
+.instagram-widget {
+    text-align: center;
+    display: flex;
+    width: 100%;
+    
+}
+
+.instagram-widget1 {
+    margin-left: 175px;
+    margin-right: 50px;
+}
+
+
 @media (max-width: 700px) {
     .right-container {
         display: none;
@@ -359,6 +372,15 @@ br {
         padding-bottom: 0.5rem;
         border-bottom: var(--border);
     }
+
+    .instagram-widget1 {
+        margin-left: 0px;
+    }
+
+    .instagram-widget2 {
+        margin-left: 0px;
+    }
+
 }
 
 
