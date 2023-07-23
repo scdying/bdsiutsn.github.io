@@ -373,14 +373,14 @@ br {
         border-bottom: var(--border);
     }
 
+    .instagram-widget {
+        display: block;
+    }
+
     .instagram-widget1 {
         margin-left: 0px;
+        margin-right: 0px;
     }
-
-    .instagram-widget2 {
-        margin-left: 0px;
-    }
-
 }
 
 
