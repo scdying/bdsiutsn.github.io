@@ -121,16 +121,19 @@
     <script>
         function sendEmail() {
             Email.send({
-                SecureToken: "e9636306-bdda-4ccf-ae4c-cb612f13e110",
-                From: 'bds.iutsn.contact@gmail.com',
-                To: document.getElementById('email').value,
+                SecureToken: '863ba848-ea9c-4018-9051-f07bb03ac6e6',
+                Host : 'smtp.elasticemail.com',
+                To: 'bds.iutsn.contact@gmail.com',
+                From: document.getElementById('email').value,
                 Subject: "Nouveau message venant du site web",
                 Body: "Nom: " + document.getElementById("name").value
+                    + "<br> Sujet: " + document.getElementById("subject").value
                     + "<br> Email: " + document.getElementById("email").value
                     + "<br> Téléphone: " + document.getElementById('number').value
                     + "<br> Message: " + document.getElementById('message').value
             }).then(
-                message => alert("Message envoyé, merci pour ton message.")
+                message => o
+                /*alert("Message envoyé avec succès.")*/
             );
         }
     </script>
