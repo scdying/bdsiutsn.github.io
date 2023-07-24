@@ -93,12 +93,12 @@
             <div class="title">
                 <h3>Une question ? Un conseil ?</h3>
             </div>
-            <form action="#" method="post">
-                <input type="text" name="name" placeholder="Entrez votre nom" required="">
-                <input type="email" name="email" placeholder="Entrez votre email" required="">
-                <input type="text" name="subject" placeholder="Entrez le sujet" required="">
-                <input type="text" name="number" placeholder="Entrez votre numéro de téléphone" required="">
-                <textarea name="message" placeholder="Entrez votre message" required=""></textarea>
+            <form action="#" method="post" onsubmit="sendEmail(); reset(); return false;">
+                <input id="name" type="text" name="name" placeholder="Entrez votre nom" required="">
+                <input id="email" type="email" name="email" placeholder="Entrez votre email" required="">
+                <input id="subject" type="text" name="subject" placeholder="Entrez le sujet" required="">
+                <input id="number" type="text" name="number" placeholder="Entrez votre numéro de téléphone" required="">
+                <textarea id="message" name="message" placeholder="Entrez votre message" required=""></textarea>
                 <button type="submit">Envoyer</button>
             </form>
         </div>
@@ -117,6 +117,23 @@
         </div>
 
     </footer>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                SecureToken: "e9636306-bdda-4ccf-ae4c-cb612f13e110",
+                From: 'bds.iutsn.contact@gmail.com',
+                To: document.getElementById('email').value,
+                Subject: "Nouveau message venant du site web",
+                Body: "Nom: " + document.getElementById("name").value
+                    + "<br> Email: " + document.getElementById("email").value
+                    + "<br> Téléphone: " + document.getElementById('number').value
+                    + "<br> Message: " + document.getElementById('message').value
+            }).then(
+                message => alert("Message envoyé, merci pour ton message.")
+            );
+        }
+    </script>
 </body>
 
 </html>
