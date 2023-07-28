@@ -32,9 +32,7 @@ ul {
 }
 
 a {
-    text-decoration: none;
     color: white;
-
 }
 
 button {
@@ -79,6 +77,10 @@ h2 {
     text-align: left;
     line-height: 50px;
     font-size: 1.5rem;
+}
+
+.containers h2 {
+    text-align: center;
 }
 
 /*
@@ -138,6 +140,7 @@ h3 {
 }
 
 .menu-bar .nav-link {
+    text-decoration: none;
     font-size: 1.2rem;
     letter-spacing: -0.6px;
     padding: 0.3rem;
@@ -162,6 +165,7 @@ h3 {
 }
 
 .dropdown {
+    text-decoration: none;
     display: flex;
     flex-direction: column;
     min-width: 230px;
@@ -199,6 +203,7 @@ h3 {
 }
 
 .dropdown-link {
+    text-decoration: none;
     display: flex;
     gap: 0.5rem;
     padding: 0.5rem 0;
@@ -282,7 +287,7 @@ br {
     text-align: center;
     display: flex;
     width: 100%;
-    
+
 }
 
 .instagram-widget1 {
@@ -430,9 +435,20 @@ a:hover {
     font-size: 2.3em;
 }
 
-.containers .title h6 {
-    margin-bottom: 5px;
-    font-size: 1.2em;
+.containers h3 {
+    margin-top: -50px;
+    font-size: 1.7em;
+}
+
+.containers h6 {
+    margin-top: 25px;
+    font-size: 1.13em;
+}
+
+.containers a.forma {
+    margin-top: 25px;
+    font-size: 1em;
+    color: rgb(19, 16, 206);
 }
 
 
@@ -503,9 +519,15 @@ a:hover {
         font-size: 2em;
     }
 
-    .containers .title h6 {
-        margin-bottom: 5px;
+    .containers h6 {
+        margin-top: 25px;
         font-size: 1em;
     }
+
+    .containers a {
+        margin-top: 25px;
+        font-size: 1em;
+    }
+
 
 }

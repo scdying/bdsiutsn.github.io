@@ -10,20 +10,20 @@
     <link href="./table/dataTables.responsive.css" rel="stylesheet" />
     <link href="./table/jquery.dataTables.css" rel="stylesheet" />
     <link href="./table/jquery-ui.js" />
-    <link href="./footer.css" rel="stylesheet" />
+    <link href="./css/footer.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link rel="shortcut icon" href="./img/bds-logo-shark.png">
 
     <meta name="fragment" content="!">
     <meta http-equiv="content-language" content="fr">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 
-    <title>BDS - Accueil</title>
+    <title>BDS - Evènements</title>
     <meta name="description" content="">
 
     <meta name="author" content="Bureau des Sports IUT Saint-Nazaire">
@@ -71,7 +71,7 @@
                             </div>
                         </li>
                         <li><a class="nav-link" href="/bdsiutsn/etudiants.html">Etudiants</a></li>
-                        <li><a class="nav-link" href="#top">Contact</a></li>
+                        <li><a class="nav-link" href="/bdsiutsn/inscription.html">Evènements</a></li>
                     </ul>
                 </nav>
             </div>
@@ -90,26 +90,21 @@
 
     <main style="padding: 1.5rem; margin: 0 auto; max-width: 1100px">
         <div class="containers">
-            <div class="title">
-                <h3>Une question ? Un conseil ?</h3>
-            </div>
-            <form action="#" method="post" onsubmit="sendEmail(); reset(); return false;">
-                <input id="name" type="text" name="name" placeholder="Entrez votre nom" required="">
-                <input id="email" type="email" name="email" placeholder="Entrez votre email" required="">
-                <input id="subject" type="text" name="subject" placeholder="Entrez le sujet" required="">
-                <input id="number" type="text" name="number" placeholder="Entrez votre numéro de téléphone" required="">
-                <textarea id="message" name="message" placeholder="Entrez votre message" required=""></textarea>
-                <button type="submit">Envoyer</button>
-            </form>
+            <div class="title"></div>
+            <h3>Merci pour votre inscription ! Elle a bien été prise en compte !</h3>
+
+            <br></br>
+            <h2>Nous vous renverrons un message de confirmation concernant votre inscription !</h2>
+        </div>
         </div>
     </main>
 
     <footer class="footer-distributed">
         <div class="footer-right">
             <a href="mailto:bds.iutsn.contact@gmail.com" target=”_blank”><i class="fa fa-envelope"></i></a>
-            <a href="https://www.instagram.com/bds.iut.sn/" target=”_blank”><i class="fa fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/bds-iut-sn/about/" target=”_blank”><i
-                    class="fa fa-linkedin"></i></a>
+            <a href="/bdsiutsn/social/instagram.html" target=”_blank”><i class="fa fa-instagram"></i></a>
+            <a href="/bdsiutsn/social/linkedin.html" target=”_blank”><i class="fa fa-linkedin"></i></a>
+            </a>
         </div>
 
         <div class="footer-left">
@@ -122,7 +117,7 @@
         function sendEmail() {
             Email.send({
                 SecureToken: '863ba848-ea9c-4018-9051-f07bb03ac6e6',
-                Host : 'smtp.elasticemail.com',
+                Host: 'smtp.elasticemail.com',
                 To: 'bds.iutsn.contact@gmail.com',
                 From: document.getElementById('email').value,
                 Subject: "Nouveau message venant du site web",
@@ -132,8 +127,7 @@
                     + "<br> Téléphone: " + document.getElementById('number').value
                     + "<br> Message: " + document.getElementById('message').value
             }).then(
-                message => o
-                /*alert("Message envoyé avec succès.")*/
+                message => alert("Message envoyé avec succès.")
             );
         }
     </script>
