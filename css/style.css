@@ -79,7 +79,7 @@ h2 {
     font-size: 1.5rem;
 }
 
-.containers h2 {
+.containers h2.zdpjvzelk {
     text-align: center;
 }
 
@@ -431,12 +431,15 @@ a:hover {
     margin-block-end: 40px;
 }
 
-.containers .title h3 {
+.containers h3 {
+    text-align: center;
     font-size: 2.3em;
+    margin-bottom: 30px;
 }
 
-.containers h3 {
+.containers h3.zdpjvzelk {
     margin-top: -50px;
+    margin-bottom: -10px;
     font-size: 1.7em;
 }
 
