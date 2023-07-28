@@ -15,6 +15,7 @@
     --ash: #f4f4f4;
     --primary-color: #2b72fb;
     --white: white;
+    --customgrey:#292c2f;
     --border: 1px solid var(--light-grey);
     --shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
         rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
@@ -118,7 +119,7 @@ h3 {
     column-gap: 2rem;
     height: 90px;
     padding: 1.2rem 3rem;
-    background-color: #292c2f;
+    background-color: var(--customgrey);
 }
 
 .menu {
@@ -161,7 +162,7 @@ h3 {
 .right-container .search {
     display: flex;
     align-items: center;
-    background-color: #292c2f;
+    background-color: var(--customgrey);
 }
 
 .dropdown {
@@ -474,7 +475,7 @@ a:hover {
 
 .containers form textarea:hover,
 .containers form input:hover {
-    border-bottom: 2px solid #292c2f;
+    border-bottom: 2px solid var(--customgrey);
 }
 
 .containers form input,
@@ -493,7 +494,7 @@ a:hover {
     height: 50px;
     border-radius: 8px;
     border: none;
-    background-color: #292c2f;
+    background-color: var(--customgrey);
     color: white;
     font-weight: bold;
     font-size: 1em;

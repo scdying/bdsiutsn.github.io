@@ -111,25 +111,6 @@
         </div>
 
     </footer>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendEmail() {
-            Email.send({
-                SecureToken: '863ba848-ea9c-4018-9051-f07bb03ac6e6',
-                Host: 'smtp.elasticemail.com',
-                To: 'bds.iutsn.contact@gmail.com',
-                From: document.getElementById('email').value,
-                Subject: "Nouveau message venant du site web",
-                Body: "Nom: " + document.getElementById("name").value
-                    + "<br> Sujet: " + document.getElementById("subject").value
-                    + "<br> Email: " + document.getElementById("email").value
-                    + "<br> Téléphone: " + document.getElementById('number').value
-                    + "<br> Message: " + document.getElementById('message').value
-            }).then(
-                message => alert("Message envoyé avec succès.")
-            );
-        }
-    </script>
 </body>
 
 </html>
