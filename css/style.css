@@ -15,7 +15,7 @@
     --ash: #f4f4f4;
     --primary-color: #2b72fb;
     --white: white;
-    --customgrey:#292c2f;
+    --customgrey: #292c2f;
     --border: 1px solid var(--light-grey);
     --shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
         rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
@@ -419,12 +419,14 @@ a:hover {
     background-color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     padding: 60px 10px;
     border-radius: 15px;
     box-sizing: border-box;
     box-shadow: 0px 10px 40px -10px black;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .containers .title {
@@ -454,7 +456,6 @@ a:hover {
     font-size: 1em;
     color: rgb(19, 16, 206);
 }
-
 
 .containers form {
     display: flex;
@@ -532,6 +533,4 @@ a:hover {
         margin-top: 25px;
         font-size: 1em;
     }
-
-
 }

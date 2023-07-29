@@ -69,7 +69,7 @@
                                     </li>
                                 </ul>
                             </div>
-                      
+
                         </li>
                         <li><a class="nav-link" href="/bdsiutsn/etudiants.html">Etudiants</a></li>
                         <li><a class="nav-link" href="#top">Evènements</a></li>
@@ -95,14 +95,15 @@
                 <h3>S'inscrire pour le prochain évènement</h3>
             </div>
             <form action="https://formsubmit.co/eaf3e07df943384d3a5bd24b497ec958" method="POST"
-                onsubmit="sendEmail(); reset(); return false;">
+                onsubmit="sendEmail(); reset(); return false;" id="wrapper">
                 <input type="text" name="_honey" style="display: none;">
 
                 <input type="hidden" name="_captcha" value="false">
 
                 <input type="hidden" name="_next" value="https://scorlay.github.io/bdsiutsn/success.html">
 
-                <input type="hidden" name="_autoresponse" value="Bonjour, nous vous confirmons la demande de participation au prochain évènement.">
+                <input type="hidden" name="_autoresponse"
+                    value="Bonjour, nous vous confirmons la demande de participation au prochain évènement.">
 
                 <input id="name" type="text" name="Capitaine" placeholder="Prénom - nom du capitaine" required="">
                 <input id="email" type="email" name="Email" placeholder="Votre email" required="">
@@ -110,15 +111,18 @@
                     placeholder="Votre numéro de téléphone" required="">
                 <input id="subject" type="text" name="Nom&nbsp;de&nbsp;votre&nbsp;équipe" placeholder="Nom d'équipe"
                     required="">
+                <textarea name="Joueurs" placeholder="Indiquez le nom de tous les étudiants participants au tournoi (Minimum 5, maximum 10)" required=""></textarea>
                 <!--<textarea id="message" name="message" placeholder="Entrez votre message" required=""></textarea>-->
                 <button type="submit">Envoyer</button>
-
-                <!--AJOUTER NOMS DES JOUEURS-->
-                <h6>Note: Si votre équipe est déjà inscrite auprès du BDS merci de ne pas renseigner le nom de chaque
+                <h6>Note: Si votre équipe est déjà inscrite auprès du BDS merci de ne pas renseigner le nom de
+                    chaque
                     joueur mais uniquement le nom de l'équipe ! (Vous pouvez vérifier cela via le <a class="forma"
-                        style="color: #292c2f;" href="/bdsiutsn/classements/equipes.html" target="_blank">Classement des équipes</a>)
+                        style="color: #292c2f;" href="/bdsiutsn/classements/equipes.html" target="_blank">Classement
+                        des
+                        équipes</a>)
                 </h6>
-            </form>
+        </div>
+        </form>
         </div>
     </main>
 
@@ -135,6 +139,8 @@
         </div>
 
     </footer>
+
+    <script src="form-script.js"></script>
 </body>
 
 </html>
