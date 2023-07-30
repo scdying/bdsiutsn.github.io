@@ -19,6 +19,7 @@ function toggleHamburger() {
   navMenu.classList.toggle("show");
 }
 
+
 dropdownBtn.forEach((btn) => {
   btn.addEventListener("click", function (e) {
     const dropdownIndex = e.currentTarget.dataset.dropdown;
