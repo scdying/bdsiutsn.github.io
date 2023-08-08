@@ -169,9 +169,9 @@ h3 {
     text-decoration: none;
     display: flex;
     flex-direction: column;
-    min-width: 230px;
+    min-width: 200px;
     background-color: #33383b;
-    border-radius: 10px;
+    border-radius: 15px;
     position: absolute;
     top: 45px;
     z-index: 1;
@@ -211,11 +211,6 @@ h3 {
     border-radius: 7px;
     transition: 0.1s ease-in-out;
 
-}
-
-.dropdown-link p {
-    font-size: 0.8rem;
-    color: var(--medium-grey);
 }
 
 .right-container {

@@ -2,33 +2,31 @@
 <html lang="fr">
 
 <head>
-    <script src="../table/jquery-1.9.1.js"></script>
-    <script src="../table/jquery-ui.js"></script>
-    <script src="../app.js" defer></script>
-    <script src="../table/jquery.dataTables.min.js"></script>
-    <script src="../table/dataTables.responsive.js"></script>
-    <link href="../table/dataTables.responsive.css" rel="stylesheet" />
-    <link href="../table/jquery.dataTables.css" rel="stylesheet" />
-    <link href="../table/jquery-ui.js" rel="stylesheet" />
-    <link href="../css/footer.css" rel="stylesheet" />
+    <script src="./table/jquery-1.9.1.js"></script>
+    <script src="./table/jquery-ui.js"></script>
+    <script src="./app.js" defer></script>
+    <script src="./table/jquery.dataTables.min.js"></script>
+    <script src="./table/dataTables.responsive.js"></script>
+    <link href="./table/dataTables.responsive.css" rel="stylesheet" />
+    <link href="./table/jquery.dataTables.css" rel="stylesheet" />
+    <link href="./table/jquery-ui.js" />
+    <link href="./css/footer.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="shortcut icon" href="../img/bds-logo-shark.png">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/bds-logo-shark.png">
 
     <meta name="fragment" content="!">
     <meta http-equiv="content-language" content="fr">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 
-    <title>BDS - Equipes</title>
+    <title>BDS - Actualités</title>
     <meta name="description" content="">
 
-    <meta name="author" content="Stéfan CORLAY">
+    <meta name="author" content="Bureau des Sports IUT Saint-Nazaire">
     <meta name="country" content="France">
     <meta name="geo.country" content="FR">
 
@@ -39,24 +37,14 @@
     <meta name="og:image:width" content="">
     <meta name="og:image:height" content="">
 
-
 </head>
 
-<body>
-    <script type="text/javascript" charset="utf-8">
-        $(document).ready(function () {
-            $('#example').DataTable({
-                responsive: true,
-                pagingType: "simple",
-                pageLength: 10
-            })
-        });
-    </script>
 
+<body>
     <header id="nav-menu" aria-label="navigation bar">
         <div class="container">
             <a class="logo" href="/bdsiutsn/index.html">
-                <img src="../img/bds-logo-shark.png" width="60" height="60" alt="Inc Logo" />
+                <img src="./img/bds-logo-shark.png" width="60" height="60" alt="Inc Logo" />
             </a>
             <div class="nav-start">
                 <nav class="menu">
@@ -70,7 +58,7 @@
                             <div id="dropdown1" class="dropdown">
                                 <ul role="menu">
                                     <li role="menuitem">
-                                        <a class="dropdown-link" href="/bdsiutsn/classements/actus.html">Evènements à venir</a>
+                                        <a class="dropdown-link" href="#top">Evènements à venir</a>
                                     </li>
                                     <li role="menuitem">
                                         <a class="dropdown-link" href="/bdsiutsn/classements/inscription.html">S'inscrire aux évènements</a>
@@ -87,15 +75,18 @@
                             <div id="dropdown2" class="dropdown">
                                 <ul role="menu">
                                     <li role="menuitem">
-                                        <a class="dropdown-link" href="#top">Classements des
+                                        <a class="dropdown-link" href="/bdsiutsn/classements/equipes.html">Classements
+                                            des
                                             équipes</a>
                                     </li>
                                     <li role="menuitem">
-                                        <a class="dropdown-link" href="/bdsiutsn/classements/promotion.html">Classements des
+                                        <a class="dropdown-link" href="/bdsiutsn/classements/promotion.html">Classements
+                                            des
                                             promotions</a>
                                     </li>
                                 </ul>
                             </div>
+
                         </li>
                         <li><a class="nav-link" href="/bdsiutsn/etudiants.html">Etudiants</a></li>
                     </ul>
@@ -115,33 +106,40 @@
     </header>
 
     <main style="padding: 1.5rem; margin: 0 auto; max-width: 1100px">
-        <h1>Classements des équipes inscrites :</h1>
-        <br><br>
-        <br><br>
-        <br><br>
-        <br><br>
-        
-        <table id="example" class="display" cellspacing="0" width="100%">
-            <thead>
-                <tr>
-                    <th>Nom d'équipe</th>
-                    <th>Points</th>
-                    <th>Membres</th>
-                    <th>Participations</th>
-                    <th>Capitaine</th>
-                </tr>
-            </thead>
+        <div class="containers">
+            <div class="titles">
+                <h3>S'inscrire pour le prochain évènement</h3>
+            </div>
+            <form action="https://formsubmit.co/eaf3e07df943384d3a5bd24b497ec958" method="POST"
+                onsubmit="sendEmail(); reset(); return false;" id="wrapper">
+                <input type="text" name="_honey" style="display: none;">
 
-            <tbody>
-                <tr>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                </tr>
-            </tbody>
-        </table>
+                <input type="hidden" name="_captcha" value="false">
+
+                <input type="hidden" name="_next" value="https://scorlay.github.io/bdsiutsn/success.html">
+
+                <input type="hidden" name="_autoresponse"
+                    value="Bonjour, nous vous confirmons la demande de participation au prochain évènement.">
+
+                <input id="name" type="text" name="Capitaine" placeholder="Prénom - nom du capitaine" required="">
+                <input id="email" type="email" name="Email" placeholder="Votre email" required="">
+                <input id="number" type="text" name="Numéro&nbsp;de&nbsp;téléphone"
+                    placeholder="Votre numéro de téléphone" required="">
+                <input id="subject" type="text" name="Nom&nbsp;de&nbsp;votre&nbsp;équipe" placeholder="Nom d'équipe"
+                    required="">
+                <textarea name="Participants"
+                    placeholder="Indiquez les noms de tous les étudiants participant au tournoi (Minimum 5, maximum 10)"></textarea>
+                <button type="submit">Envoyer</button>
+                <h6>Note: Si votre équipe est déjà inscrite auprès du BDS merci de ne pas renseigner le nom de
+                    chaque
+                    joueur mais uniquement le nom de l'équipe ! (Vous pouvez vérifier cela via le <a class="forma"
+                        style="color: #292c2f;" href="/bdsiutsn/classements/equipes.html" target="_blank">Classement
+                        des
+                        équipes</a>)
+                </h6>
+        </div>
+        </form>
+        </div>
     </main>
 
     <footer class="footer-distributed">
@@ -149,14 +147,16 @@
             <a href="mailto:bds.iutsn.contact@gmail.com" target=”_blank”><i class="fa fa-envelope"></i></a>
             <a href="/bdsiutsn/social/instagram.html" target=”_blank”><i class="fa fa-instagram"></i></a>
             <a href="/bdsiutsn/social/linkedin.html" target=”_blank”><i class="fa fa-linkedin"></i></a>
+            </a>
         </div>
 
         <div class="footer-left">
             <p>Site du Bureau des Sports de l'IUT de Saint-Nazaire développé par Stéfan CORLAY</p>
         </div>
 
-
     </footer>
+
+    <script src="form-script.js"></script>
 </body>
 
 </html>
