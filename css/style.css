@@ -76,6 +76,7 @@ h1 {
 
 h2 {
     text-align: left;
+    text-decoration: underline;
     line-height: 50px;
     font-size: 1.5rem;
 }
@@ -330,8 +331,8 @@ br {
         min-width: 100%;
         border: none !important;
         border-radius: 10px;
-        position: static;
-        top: 0;
+        position: relative;
+        top: 0px;
         left: 0;
         visibility: visible;
         opacity: 1;
