@@ -52,7 +52,7 @@ h6 {
 }
 
 a {
-    color: #ad1deb;
+    color: #2b72fb;
     outline: 0;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
@@ -98,34 +98,6 @@ body.down .header-default.clone {
 
 .navbar {
     padding: 0;
-}
-
-.navbar-nav {
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-}
-
-.navbar-nav .nav-link {
-    padding: 0.439rem 1rem;
-    color: #79889e;
-}
-
-.navbar-nav .nav-link:hover {
-    color: #203656;
-}
-
-.navbar-nav li.active .nav-link {
-    color: #fff;
-    background: #6a3093;
-    border-radius: 25px;
-    background-color: #6e72fc;
-    background-image: linear-gradient(315deg, #6e72fc 0%, #ad1deb 74%);
-}
-
-.navbar-brand {
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-right: 0;
 }
 
 .dropdown-menu {
@@ -195,7 +167,7 @@ body.down .header-default.clone {
 
 .dropdown-item:focus,
 .dropdown-item:hover {
-    color: #ad1deb;
+    color: #2b72fb;
     background-color: transparent;
 }
 
@@ -339,7 +311,7 @@ button:focus {
     border: 0;
     border-radius: 50%;
     background-color: #6e72fc;
-    background-image: linear-gradient(315deg, #6e72fc 0%, #ad1deb 74%);
+    background-image: linear-gradient(315deg, #6e72fc 0%, #2b72fb 74%);
     background-size: auto 200%;
     display: inline-flex;
     justify-content: center;
@@ -364,7 +336,7 @@ button:focus {
 }
 
 .social-icons a:hover {
-    color: #ad1deb;
+    color: #2b72fb;
 }
 
 .social-icons li:not(:last-child) {
@@ -469,7 +441,7 @@ button:focus {
 }
 
 .canvas-menu .vertical-menu li.active a {
-    color: #ad1deb;
+    color: #2b72fb;
 }
 
 .canvas-menu .vertical-menu li.active .submenu a {
@@ -502,7 +474,7 @@ button:focus {
     padding: 10px;
     line-height: 1;
     cursor: pointer;
-    color: #ad1deb;
+    color: #2b72fb;
     position: absolute;
     top: 0;
     right: 0;
@@ -569,7 +541,7 @@ button:focus {
     color: #fff;
     padding: 9.5px 36px;
     background-color: #6e72fc;
-    background-image: linear-gradient(315deg, #6e72fc 0%, #ad1deb 74%);
+    background-image: linear-gradient(315deg, #6e72fc 0%, #2b72fb 74%);
     background-size: 200% auto;
 }
 
@@ -598,7 +570,7 @@ button:focus {
 }
 
 .form-control:focus {
-    border-color: #ad1deb;
+    border-color: #2b72fb;
     outline: 0;
     box-shadow: none;
 }
@@ -637,7 +609,7 @@ button:focus {
     top: 20px;
     z-index: 1;
     background-color: #6e72fc;
-    background-image: linear-gradient(315deg, #6e72fc 0%, #ad1deb 74%);
+    background-image: linear-gradient(315deg, #6e72fc 0%, #2b72fb 74%);
     background-size: 200% auto;
     transition: all 0.3s ease-in-out;
 }
@@ -669,7 +641,7 @@ button:focus {
 }
 
 .post .post-title a:hover {
-    color: #ad1deb;
+    color: #2b72fb;
 }
 
 .post .meta {
@@ -698,7 +670,7 @@ button:focus {
 .post .meta li::after {
     content: "";
     display: inline-block;
-    background-color: #ad1deb;
+    background-color: #2b72fb;
     border-radius: 50%;
     margin-left: 1rem;
     height: 3px;
@@ -887,7 +859,7 @@ button:focus {
     margin: 8px;
     border-radius: 50%;
     border: 3px solid;
-    border-color: #ad1deb transparent #ad1deb transparent;
+    border-color: #2b72fb transparent #2b72fb transparent;
     animation: lds-dual-ring 1.2s linear infinite;
 }
 
@@ -920,7 +892,7 @@ button:focus {
 .nav-pills .show>.nav-link {
     color: #fff !important;
     background-color: #6e72fc;
-    background-image: linear-gradient(315deg, #6e72fc 0%, #ad1deb 74%);
+    background-image: linear-gradient(315deg, #6e72fc 0%, #2b72fb 74%);
     border-color: transparent;
     background-size: 200% auto;
 }
@@ -1018,7 +990,7 @@ button:focus {
     width: 50px;
     box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.15);
     background-color: #6e72fc;
-    background: linear-gradient(315deg, #6e72fc 0%, #ad1deb 74%);
+    background: linear-gradient(315deg, #6e72fc 0%, #2b72fb 74%);
     z-index: 1;
 }
 
@@ -1095,8 +1067,8 @@ button:focus {
 }
 
 .slick-custom-buttons:hover {
-    color: #ad1deb;
-    border-color: #ad1deb;
+    color: #2b72fb;
+    border-color: #2b72fb;
 }
 
 /* -************ */
@@ -1224,7 +1196,7 @@ button:focus {
 }
 
 .post .post-bottom .social-share .icons li a:hover {
-    color: #ad1deb;
+    color: #2b72fb;
 }
 
 .post .post-bottom .social-share .icons li:not(:last-child) {
@@ -1245,7 +1217,7 @@ button:focus {
 }
 
 .post .post-bottom .more-button a:hover {
-    color: #ad1deb;
+    color: #2b72fb;
 }
 
 .post.post-list::after {
@@ -1273,7 +1245,7 @@ button:focus {
     width: 30px;
     box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.15);
     background-color: #6e72fc;
-    background-image: linear-gradient(315deg, #6e72fc 0%, #ad1deb 74%);
+    background-image: linear-gradient(315deg, #6e72fc 0%, #2b72fb 74%);
     z-index: 1;
 }
 
@@ -1285,8 +1257,8 @@ button:focus {
 }
 
 .btn-simple:hover {
-    color: #ad1deb;
-    border-color: #ad1deb;
+    color: #2b72fb;
+    border-color: #2b72fb;
 }
 
 /* ************** */
@@ -1327,7 +1299,7 @@ button:focus {
     width: 24px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
     background: #6e72fc;
-    background-image: linear-gradient(315deg, #6e72fc 0%, #ad1deb 74%);
+    background-image: linear-gradient(315deg, #6e72fc 0%, #2b72fb 74%);
     z-index: 1;
 }
 
@@ -1360,7 +1332,7 @@ li.list-inline-item {
 }
 
 .widget ul.list li a:hover {
-    color: #ad1deb;
+    color: #2b72fb;
 }
 
 .widget ul.list li::after {
@@ -1405,7 +1377,7 @@ ul .meta{
     color: #fff;
     padding: 9.5px 36px;
     background-color: #6e72fc;
-    background-image: linear-gradient(315deg, #6e72fc 0%, #ad1deb 74%);
+    background-image: linear-gradient(315deg, #6e72fc 0%, #2b72fb 74%);
     background-size: 200% auto;
 }
 
@@ -1440,8 +1412,8 @@ ul .meta{
 }
 
 .tag:hover {
-    border-color: #ad1deb;
-    color: #ad1deb;
+    border-color: #2b72fb;
+    color: #2b72fb;
 }
 
 /* *************** */
@@ -1513,8 +1485,8 @@ p {
 }
 
 #return-to-top:hover {
-    color: #ad1deb;
-    border-color: #ad1deb;
+    color: #2b72fb;
+    border-color: #2b72fb;
 }
 
 /* *********** responsiveness **************** */
