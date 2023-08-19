@@ -17,6 +17,11 @@
     padding: 45px 50px;
 }
 
+#footer-distri {
+    position:fixed;
+    bottom:0;
+}
+
 
 .footer-distributed p {
     color: #8f9296;
