@@ -1,0 +1,73 @@
+h1 {
+    padding: 40px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+li.contact a {
+    color: #2d2f31;
+}
+
+nav.nav-contact {
+    width: 300px;
+    background: #d9d9d9;
+}
+
+
+span {
+    padding: 30px;
+    background: #2d2f31;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    display: block;
+}
+
+span::after {
+    float: right;
+    right: 10%;
+    content: "+";
+}
+
+.slide {
+    clear: both;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    text-align: center;
+    transition: height .4s ease;
+}
+
+.slide li {
+    padding: 20px;
+}
+
+#touch {
+    position: absolute;
+    opacity: 0;
+    height: 0px;
+}
+
+#touch:checked+.slide {
+    height: 200px;
+}
+
+#touchs {
+    position: absolute;
+    opacity: 0;
+    height: 0px;
+}
+
+#touchs:checked+.slide {
+    height: 230px;
+}
+
+#touchss {
+    position: absolute;
+    opacity: 0;
+    height: 0px;
+}
+
+#touchss:checked+.slide {
+    height: 230px;
+}
