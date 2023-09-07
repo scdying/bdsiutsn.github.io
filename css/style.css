@@ -293,7 +293,6 @@ br {
     margin-right: 50px;
 }
 
-
 @media (max-width: 800px) {
     .right-container {
         display: none;

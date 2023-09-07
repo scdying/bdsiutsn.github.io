@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    place-items: center;
+}
+
+.main .button {
+    background-color: #fff;
+    width: 56px;
+    height: 56px;
+    border-radius: 50px;
+    margin: 35px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+    transition: all .3s ease-in-out;
+}
+
+.main .button:hover {
+    width: 160px;
+}
+
+.main .button:nth-child(1):hover {
+    background-color: #4267b2;
+    color: #fff;
+}
+
+.main .button:nth-child(2):hover {
+    background-color: #4267b2;
+    color: #fff;
+}
+
+.main .button:nth-child(3):hover {
+    background-color: #4267b2;
+    color: #fff;
+}
+
+.main .button:nth-child(4):hover {
+    background-color: #4267b2;
+    color: #fff;
+}
+
+.main .button:nth-child(5):hover {
+    background-color: #4267b2;
+    color: #fff;
+}
+
+.button .s-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    text-align: center;
+    transition: all .3s ease-in-out;
+
+}
+
+.button .s-icon i {
+    font-size: 24px;
+}
+
+.button span {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.title-reseau {
+    margin-bottom: -150px;
+}
+
+@media (max-width: 800px) {
+    .title-reseau {
+        margin-bottom: -50px;
+    }
+}
