@@ -95,7 +95,6 @@ font-size: 24%;
 
 li {
     text-decoration: none;
-    color: inherit;
     line-height: 30px;
     font-size: 1rem;
     font-weight: normal
@@ -120,7 +119,6 @@ h3 {
     column-gap: 2rem;
     height: 90px;
     padding: 1.2rem 3rem;
-    background-color: var(--customgrey);
 }
 
 .menu {
@@ -150,6 +148,7 @@ h3 {
     min-width: 60px;
     margin: 0 0.6rem;
     font-weight: 600;
+    color: #292c2f;
 }
 
 .menu-bar .nav-link:hover,
@@ -164,24 +163,25 @@ h3 {
 .right-container .search {
     display: flex;
     align-items: center;
-    background-color: var(--customgrey);
 }
 
 .dropdown {
-    text-decoration: none;
+    text-decoration: underline;
     display: flex;
     flex-direction: column;
-    min-width: 200px;
-    background-color: #33383b;
+    min-width: 250px;
     border-radius: 15px;
     position: absolute;
     top: 45px;
-    z-index: 1;
+    z-index: 100;
     visibility: hidden;
     opacity: 0;
     transform: scale(0.97) translateX(-5px);
     transition: 0.1s ease-in-out;
-    box-shadow: var(--shadow);
+    border-style:solid;
+    border-color: #292c2f;
+    border-width: 1px;
+    background-color: white;
 }
 
 .dropdown.active {
@@ -212,7 +212,6 @@ h3 {
     padding: 0.5rem 0;
     border-radius: 7px;
     transition: 0.1s ease-in-out;
-
 }
 
 .right-container {
@@ -266,11 +265,12 @@ h3 {
     position: absolute;
     top: 0.75rem;
     right: 0.75rem;
+    color: var(--customgrey)
 }
 
 #hamburger .openIcon {
     display: block;
-    margin-top: 11.5px;
+    margin-top: 18px;
 }
 
 #hamburger.open .openIcon {
@@ -946,10 +946,3 @@ a:hover {
         font-size: 1em;
     }
 }
-
-
-
-/*actus.html css*/
-
-
-/*end actus.html css*/
