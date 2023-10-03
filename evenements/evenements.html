@@ -54,7 +54,22 @@
                 <nav class="menu">
                     <ul class="menu-bar">
                         <li><a class="nav-link" href="/">Accueil</a></li>
-                        <li><a class="nav-link" href="/evenements">Evènements</a></li>
+                        <li>
+                            <button class="nav-link dropdown-btn" data-dropdown="dropdown1" aria-haspopup="true"
+                                aria-expanded="false" aria-label="discover">
+                                Evènements
+                            </button>
+                            <div id="dropdown1" class="dropdown">
+                                <ul role="menu">
+                                    <li role="menuitem">
+                                        <a class="dropdown-link" href="#" style="color: #292c2f;">Tous les evènements à venir</a>
+                                    </li>
+                                    <li role="menuitem">
+                                        <a class="dropdown-link" href="/evenements/futsal" style="color: #292c2f;">Tournoi Futsal</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
                         <li>
                             <button class="nav-link dropdown-btn" data-dropdown="dropdown2" aria-haspopup="true"
                                 aria-expanded="false" aria-label="discover">
@@ -137,7 +152,7 @@
                             <div class="col-sm-6">
                                 <div class="post">
                                     <div class="thumb rounded">
-                                        <a href="https://www.helloasso.com/associations/bureau-des-sports-iut-saint-nazaire/evenements/tournoi-d-athletisme" class="category-badge position-absolute">Tournoi</a>
+                                        <a href="/evenements/futsal" class="category-badge position-absolute">Tournoi</a>
                                             <div class="inner">
                                                 <img src="../img/posts/tren-lg-1.png"  style="max-width: 100%; z-index: -1; height: auto; position: relative; vertical-align: middle" alt="">
                                             </div>
@@ -154,7 +169,7 @@
                                         <li class="list-inline-item">26 octobre 2023</li>
                                     </ul>
                                     <h5 class="post-title mb-3 mt-3">
-                                        <a href="https://www.helloasso.com/associations/bureau-des-sports-iut-saint-nazaire/evenements/tournoi-d-athletisme">Tournoi Futsal ouvert aux inscriptions !</a>
+                                        <a href="/evenements/futsal">Tournoi Futsal ouvert aux inscriptions !</a>
                                     </h5>
                                     <p class="excerpt mb-0">
                                         Rendez vous au <a href="https://maps.app.goo.gl/sVY8sfA8qYFokFTQ9?g_st=ic" target="_blank" style="color: #292c2f; text-decoration: underline;">Gymnase Heinlex</a> à partir de 14h30 !

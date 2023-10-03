@@ -53,7 +53,22 @@
                 <nav class="menu">
                     <ul class="menu-bar">
                         <li><a class="nav-link" href="/">Accueil</a></li>
-                        <li><a class="nav-link" href="/evenements">Evènements</a></li>
+                        <li>
+                            <button class="nav-link dropdown-btn" data-dropdown="dropdown1" aria-haspopup="true"
+                                aria-expanded="false" aria-label="discover">
+                                Evènements
+                            </button>
+                            <div id="dropdown1" class="dropdown">
+                                <ul role="menu">
+                                    <li role="menuitem">
+                                        <a class="dropdown-link" href="/evenements/evenements" style="color: #292c2f;">Tous les evènements à venir</a>
+                                    </li>
+                                    <li role="menuitem">
+                                        <a class="dropdown-link" href="/evenements/futsal" style="color: #292c2f;">Tournoi Futsal</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
                         <li>
                             <button class="nav-link dropdown-btn" data-dropdown="dropdown2" aria-haspopup="true"
                                 aria-expanded="false" aria-label="discover">
