@@ -66,7 +66,7 @@ span::after {
 }
 
 #touch:checked+.slide {
-    height: 200px;
+    height: 150px;
 }
 
 #touchs {
@@ -76,7 +76,7 @@ span::after {
 }
 
 #touchs:checked+.slide {
-    height: 230px;
+    height: 150px;
 }
 
 #touchss {
@@ -86,5 +86,5 @@ span::after {
 }
 
 #touchss:checked+.slide {
-    height: 230px;
+    height: 150px;
 }
