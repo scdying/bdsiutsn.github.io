@@ -26,8 +26,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 
     <title>BDS - Equipes</title>
-    <meta name="description"
-        content="Le BDS de l’IUT de Saint-Nazaire est une association qui a pour but d’organiser des événements sportifs et festifs pour les 1500 étudiants de l’IUT de Saint-Nazaire.">
+    <meta name="description" content="Le BDS de l’IUT de Saint-Nazaire est une association qui a pour but d’organiser des événements sportifs et festifs pour les 1500 étudiants de l’IUT de Saint-Nazaire.">
 
     <meta name="author" content="Stéfan CORLAY">
     <meta name="country" content="France">
@@ -46,7 +45,10 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2MGP41PJSW"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
     gtag('js', new Date());
 
     gtag('config', 'G-2MGP41PJSW');
@@ -54,7 +56,7 @@
 
 <body>
     <script type="text/javascript" charset="utf-8">
-        $(document).ready(function () {
+        $(document).ready(function() {
             $('#example').DataTable({
                 responsive: true,
                 pagingType: "simple",
@@ -72,9 +74,8 @@
                 <nav class="menu">
                     <ul class="menu-bar">
                         <li><a class="nav-link" href="/">Accueil</a></li>
-                     <li>
-                            <button class="nav-link dropdown-btn" data-dropdown="dropdown1" aria-haspopup="true"
-                                aria-expanded="false" aria-label="discover">
+                        <li>
+                            <button class="nav-link dropdown-btn" data-dropdown="dropdown1" aria-haspopup="true" aria-expanded="false" aria-label="discover">
                                 Evènements
                             </button>
                             <div id="dropdown1" class="dropdown">
@@ -92,8 +93,7 @@
                             </div>
                         </li>
                         <li>
-                            <button class="nav-link dropdown-btn" data-dropdown="dropdown2" aria-haspopup="true"
-                                aria-expanded="false" aria-label="discover">
+                            <button class="nav-link dropdown-btn" data-dropdown="dropdown2" aria-haspopup="true" aria-expanded="false" aria-label="discover">
                                 Classements
                                 <i class="bx bx-chevron-down" aria-hidden="true"></i>
                             </button>
@@ -104,8 +104,7 @@
                                             équipes</a>
                                     </li>
                                     <li role="menuitem">
-                                        <a class="dropdown-link" href="/classements/promotion"
-                                            style="color: #292c2f;">Classement des
+                                        <a class="dropdown-link" href="/classements/promotion" style="color: #292c2f;">Classement des
                                             promotions</a>
                                     </li>
                                 </ul>
@@ -144,37 +143,43 @@
                     <th>Capitaine</th>
                 </tr>
             </thead>
-
             <tbody>
-                <tr class="team1">
-                    <td>Les Chefs</td>
-                    <td>MLT</td>
-                    <td>7</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>Hadrien LEROY</td>
-                </tr>
-                <tr class="team2">
-                    <td>Joga Bonito</td>
-                    <td>TC</td>
-                    <td>6</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>Gatien BARBIER</td>
-                </tr>
-                <tr class="team3">
-                    <td>Taraji</td>
-                    <td>GCGP</td>
-                    <td>7</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>Brahim DALIL</td>
-                </tr>
             </tbody>
         </table>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                fetch('../datas/equipes.json')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error("Error JSON file.");
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        const tableBody = document.querySelector('#example tbody');
+                        if (tableBody && data.teams) {
+                            data.teams.forEach((team, index) => {
+                                const row = document.createElement('tr');
+                                row.className = `team${index + 1}`;
+                                row.innerHTML = `
+                                <td>${team.name}</td>
+                                <td>${team.promotion}</td>
+                                <td>${team.members}</td>
+                                <td>${team.rank}</td>
+                                <td>${team.points}</td>
+                                <td>${team.participations}</td>
+                                <td>${team.captain}</td>
+                            `;
+                                tableBody.appendChild(row);
+                            });
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Fetch error: ", error.message);
+                    });
+            });
+        </script>
 
         <br><br>
         <!--<h1>Explication du classement :</h1>
