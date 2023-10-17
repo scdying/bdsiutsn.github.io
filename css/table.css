@@ -1,6 +1,10 @@
+#example-container {
+    overflow-x: auto;
+}
+
 #example {
     font-family: Arial, sans-serif;
-    width: 100%;
+    min-width: 800px;
     border-collapse: collapse;
     margin-top: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -40,4 +44,16 @@
     padding: 5px 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
+}
+
+@media (max-width: 800px) {
+    #example th,
+    #example td {
+        padding: 8px 10px;
+    }
+    .search-bar,
+    .display-option {
+        display: block;
+        margin-bottom: 10px;
+    }
 }

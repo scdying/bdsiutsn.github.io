@@ -129,21 +129,21 @@
     <main style="padding: 1.5rem; margin: 0 auto; max-width: 800px">
         <h1>Classement des promotions :</h1>
         <br><br>
+        <div id="example-container">
+            <table id="example" class="display" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>Promotion</th>
+                        <th>Points</th>
+                        <th>Rang</th>
+                        <th>Equipes</th>
+                    </tr>
+                </thead>
 
-        <table id="example" class="display" cellspacing="0" width="100%">
-            <thead>
-                <tr>
-                    <th>Promotion</th>
-                    <th>Points</th>
-                    <th>Rang</th>
-                    <th>Equipes</th>
-                </tr>
-            </thead>
-
-            <tbody>
-            </tbody>
-        </table>
-
+                <tbody>
+                </tbody>
+            </table>
+        </div>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 fetch('../datas/promotions.json')
