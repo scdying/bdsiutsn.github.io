@@ -155,8 +155,13 @@
 
             function populateTable(data) {
                 const tbody = document.querySelector('#example tbody');
+                const sortedData = data.sort((a, b) => {
+                    const rankA = a.rank || 999999;
+                    const rankB = b.rank || 999999;
+                    return rankA - rankB;
+                });
 
-                data.forEach(team => {
+                sortedData.forEach(team => {
                     const row = document.createElement('tr');
                     row.innerHTML = `
                         <td>${team.name}</td>
