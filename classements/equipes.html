@@ -5,16 +5,10 @@
     <script src="../table/jquery-1.9.1.js"></script>
     <script src="../table/jquery-ui.js"></script>
     <script src="../app.js" defer></script>
-    <script src="../table/jquery.dataTables.min.js"></script>
-    <script src="../table/dataTables.responsive.js"></script>
-    <link href="../table/dataTables.responsive.css" rel="stylesheet" />
-    <link href="../table/jquery.dataTables.css" rel="stylesheet" />
     <link href="../table/jquery-ui.js" rel="stylesheet" />
     <link href="../css/footer.css" rel="stylesheet" />
+    <link href="../css/table.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -131,6 +125,13 @@
         <h1>Classement des équipes inscrites :</h1>
         <br><br>
 
+        <div class="controls">
+            <div class="search-bar">
+                Recherche:
+                <input type="text">
+            </div>
+        </div>
+
         <table id="example" class="display" cellspacing="0" width="100%">
             <thead>
                 <tr>
@@ -148,37 +149,56 @@
         </table>
 
         <script>
-            document.addEventListener("DOMContentLoaded", function() {
+            document.addEventListener('DOMContentLoaded', function() {
                 fetch('../datas/equipes.json')
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error("Error JSON file.");
-                        }
-                        return response.json();
-                    })
+                    .then(response => response.json())
                     .then(data => {
-                        const tableBody = document.querySelector('#example tbody');
-                        if (tableBody && data.teams) {
-                            data.teams.forEach((team, index) => {
-                                const row = document.createElement('tr');
-                                row.className = `team${index + 1}`;
-                                row.innerHTML = `
-                                <td>${team.name}</td>
-                                <td>${team.promotion}</td>
-                                <td>${team.members}</td>
-                                <td>${team.rank}</td>
-                                <td>${team.points}</td>
-                                <td>${team.participations}</td>
-                                <td>${team.captain}</td>
-                            `;
-                                tableBody.appendChild(row);
-                            });
-                        }
-                    })
-                    .catch(error => {
-                        console.error("Fetch error: ", error.message);
+                        populateTable(data);
                     });
+
+                const searchInput = document.querySelector('.search-bar input');
+
+                searchInput.addEventListener('input', filterTable);
+
+                function filterTable() {
+                    const searchTerm = searchInput.value.toLowerCase();
+                    const rows = document.querySelectorAll('#example tbody tr');
+
+                    rows.forEach(row => {
+                        const columns = Array.from(row.querySelectorAll('td')).map(column => column.textContent.toLowerCase());
+                        const matchesSearch = columns.some(column => column.includes(searchTerm));
+
+                        if (matchesSearch) {
+                            row.style.display = '';
+                        } else {
+                            row.style.display = 'none';
+                        }
+                    });
+                }
             });
+
+            function populateTable(data) {
+                const tbody = document.querySelector('#example tbody');
+                const sortedData = data.sort((a, b) => {
+                    const rankA = a.rank || 999999;
+                    const rankB = b.rank || 999999;
+                    return rankA - rankB;
+                });
+
+                sortedData.forEach(team => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${team.name}</td>
+                        <td>${team.promotion}</td>
+                        <td>${team.members}</td>
+                        <td>${team.rank || '-'}</td>
+                        <td>${team.points || '-'}</td>
+                        <td>${team.participations || '-'}</td>
+                        <td>${team.captain}</td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            }
         </script>
 
         <br><br>

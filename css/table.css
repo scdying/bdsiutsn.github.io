@@ -1,0 +1,43 @@
+#example {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#example thead {
+    background-color: #f5f5f5;
+}
+
+#example th {
+    padding: 10px 20px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+}
+
+#example tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+#example td {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+#example tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.search-bar,
+.display-option {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.search-bar input,
+.display-option select {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}

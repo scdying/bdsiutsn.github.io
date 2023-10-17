@@ -1,30 +1,28 @@
-{
-    "teams": [{
-            "name": "Les Chefs",
-            "promotion": "MLT",
-            "members": 7,
-            "rank": "-",
-            "points": "-",
-            "participations": "-",
-            "captain": "Hadrien LEROY"
-        },
-        {
-            "name": "Joga Bonito",
-            "promotion": "TC",
-            "members": 6,
-            "rank": "-",
-            "points": "-",
-            "participations": "-",
-            "captain": "Gatien BARBIER"
-        },
-        {
-            "name": "Taraji",
-            "promotion": "GCGP",
-            "members": 7,
-            "rank": "-",
-            "points": "-",
-            "participations": "-",
-            "captain": "Brahim DALIL"
-        }
-    ]
-}
+[{
+        "name": "Les Chefs",
+        "promotion": "MLT",
+        "members": 7,
+        "rank": "-",
+        "points": "-",
+        "participations": "-",
+        "captain": "Hadrien LEROY"
+    },
+    {
+        "name": "Joga Bonito",
+        "promotion": "TC",
+        "members": 6,
+        "rank": "-",
+        "points": "-",
+        "participations": "-",
+        "captain": "Gatien BARBIER"
+    },
+    {
+        "name": "Taraji",
+        "promotion": "GCGP",
+        "members": 7,
+        "rank": "-",
+        "points": "-",
+        "participations": "-",
+        "captain": "Brahim DALIL"
+    }
+]
