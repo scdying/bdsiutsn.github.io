@@ -132,7 +132,6 @@
                 <div class="col-lg-8">
                     <div class="padding-30 rounded bordered">
                         <div class="row gy-5" id="eventsContainer">
-                            <!-- Les événements seront injectés ici -->
                         </div>
                     </div>
                 </div>
@@ -143,11 +142,16 @@
             document.addEventListener('DOMContentLoaded', function() {
                 fetch("https://admin.bdsiutsn.fr/evenements?json=true")
                     .then(response => response.json())
-                    .then(data => renderEvents(data.events));
+                    .then(data => {
+                        const upcomingEvents = data.events.filter(event => !event.past);
+                        const pastEvents = data.events.filter(event => event.past);
+                        renderEvents(upcomingEvents, 'eventsContainer');
+                        renderEvents(pastEvents, 'pastEventsContainer');
+                    });
             });
 
-            function renderEvents(events) {
-                const eventsContainer = document.getElementById('eventsContainer');
+            function renderEvents(events, containerId) {
+                const eventsContainer = document.getElementById(containerId);
 
                 events.forEach(event => {
                     const eventDiv = document.createElement('div');
@@ -195,39 +199,11 @@
             <div class="container-xl">
                 <div class="col-lg-8">
                     <div class="padding-30 rounded bordered">
-                        <div class="row gy-5">
-
-                            <div class="col-sm-6">
-                                <div class="post">
-                                    <div class="thumb rounded">
-                                        <a href="#" class="category-badge position-absolute">Découverte</a>
-                                        <div class="inner">
-                                            <img src="../img/posts/tren-lg-2.png" style="max-width: 100%; z-index: -1; height: auto; position: relative; vertical-align: middle" alt="">
-                                        </div>
-                                        </a>
-                                    </div>
-                                    <ul class="meta list-inline mt-4 mb-0">
-                                        <li class="list-inline-item">
-                                            <a href="/social/instagram" target="_blank">
-                                                <img src="../img/bds-logo-shark.png" class="author" width="30" height="30" alt="Inc Logo"> BDS IUT SN
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">14 septembre 2023</li>
-                                    </ul>
-                                    <h5 class="post-title mb-3 mt-3">
-                                        <a href="#">Evènement d'intégration ouvert à tous !</a>
-                                    </h5>
-                                    <p class="excerpt mb-0">
-                                        Rendez vous à <a href="https://goo.gl/maps/kre7WSdY8FMGnqW47" target="_blank" style="color: #292c2f; text-decoration: underline;">la Plage de Monsieur Hulot Saint-Marc</a> à partir de 14h !
-                                    </p>
-                                </div>
-                            </div>
-
+                        <div class="row gy-5" id="pastEventsContainer">
                         </div>
                     </div>
                 </div>
             </div>
-
         </section>
 
         <br></br>
