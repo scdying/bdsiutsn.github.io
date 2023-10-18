@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDS Panel</title>
+    <link rel="shortcut icon" href="../img/bds-logo-shark.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+         :root {
+            --bg-color: #1a202c;
+            --primary-color: #2d3748;
+            --accent-color: #4a90e2;
+            --text-color: #f7f9fc;
+            --font: 'Poppins', sans-serif;
+        }
+        
+        body {
+            font-family: var(--font);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        header {
+            margin-bottom: 20px;
+        }
+        
+        form {
+            background: var(--primary-color);
+            padding: 20px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+        
+        form label,
+        form button {
+            width: 50%;
+            margin: 10px 0;
+        }
+        
+        form input {
+            width: 70%;
+            margin: 10px 0;
+        }
+        
+        form input {
+            padding: 8px 10px;
+            border-radius: 25px;
+            border: none;
+            outline: none;
+            font-size: 14px;
+            text-align: center;
+        }
+        
+        form button {
+            background: var(--accent-color);
+            color: var(--text-color);
+            padding: 8px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        form button:hover {
+            background: var(--bg-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="../img/bds-logo-shark.png" width="60" height="60" alt="Inc Logo">
+        </header>
+
+        <form action="#" method="POST" id="loginForm">
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" name="password">
+            <button type="submit">Se connecter</button>
+        </form>
+    </div>
+</body>
+
+</html>
