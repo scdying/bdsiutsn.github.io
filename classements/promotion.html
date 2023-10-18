@@ -146,7 +146,7 @@
         </div>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                fetch('../datas/promotions.json')
+                fetch('https://admin.bdsiutsn.fr/promotions?json=true')
                     .then(response => response.json())
                     .then(data => {
                         populateTable(data);

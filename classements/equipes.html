@@ -154,7 +154,7 @@
 
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                fetch('../datas/equipes.json')
+                fetch('https://admin.bdsiutsn.fr/equipes?json=true')
                     .then(response => response.json())
                     .then(data => {
                         populateTable(data);
