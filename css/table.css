@@ -1,32 +1,47 @@
-#example-container {
-    overflow-x: auto;
+:root {
+    --main-bg-color: #f7f9fc;
+    --header-bg-color: #ecf0f1;
+    --text-color: #5a6270;
+    --header-text-color: #000000;
+    --border-color: #e2e8f0;
+    --hover-bg-color: #e2e8f0;
+    --input-bg-color: #ffffff;
+    --input-border-color: #cbd5e0;
+    --main-font: 'Poppins', sans-serif;
 }
 
 #example {
-    font-family: Arial, sans-serif;
-    min-width: 800px;
+    font-family: var(--main-font);
+    background-color: var(--main-bg-color);
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto;
     border-collapse: collapse;
-    margin-top: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 #example thead {
-    background-color: #f5f5f5;
+    background-color: var(--header-bg-color);
 }
 
 #example th {
-    padding: 10px 20px;
+    padding: 16px 24px;
     text-align: left;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid var(--border-color);
+    color: var(--header-text-color);
+    font-weight: 600;
 }
 
 #example tbody tr:hover {
-    background-color: #f9f9f9;
+    background-color: var(--hover-bg-color);
 }
 
 #example td {
-    padding: 10px 20px;
-    border-bottom: 1px solid #ddd;
+    padding: 14px 24px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-color);
 }
 
 #example tbody tr:last-child td {
@@ -36,20 +51,32 @@
 .search-bar,
 .display-option {
     display: inline-block;
-    margin-right: 20px;
 }
 
 .search-bar input,
 .display-option select {
-    padding: 5px 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    padding: 8px 16px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: var(--input-bg-color);
+    transition: all 0.3s;
+}
+
+.search-bar input:focus,
+.display-option select:focus {
+    border-color: var(--header-text-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(97, 218, 251, 0.3);
 }
 
 @media (max-width: 800px) {
+    #example-container {
+        overflow-x: auto;
+    }
     #example th,
     #example td {
-        padding: 8px 10px;
+        padding: 12px 16px;
     }
     .search-bar,
     .display-option {
