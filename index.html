@@ -143,20 +143,17 @@
                     .then(response => response.json())
                     .then(data => {
                         const upcomingEvents = data.events.filter(event => !event.past);
-                        const shuffledEvents = shuffleArray(upcomingEvents);
-                        const randomTwoEvents = shuffledEvents.slice(0, 2);
+                        const sortedEvents = upcomingEvents.sort((a, b) => {
+                            const dateA = new Date(a.date);
+                            const dateB = new Date(b.date);
+                            return dateA - dateB;
+                        });
 
-                        renderEvents(randomTwoEvents);
+                        const nextTwoEvents = sortedEvents.slice(0, 2);
+
+                        renderEvents(nextTwoEvents);
                     });
             });
-
-            function shuffleArray(array) {
-                for (let i = array.length - 1; i > 0; i--) {
-                    const j = Math.floor(Math.random() * (i + 1));
-                    [array[i], array[j]] = [array[j], array[i]];
-                }
-                return array;
-            }
 
             function renderEvents(events) {
                 const eventsContainer = document.getElementById('eventsContainer');
