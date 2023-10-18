@@ -5,10 +5,6 @@
     <script src="./table/jquery-1.9.1.js"></script>
     <script src="./table/jquery-ui.js"></script>
     <script src="./app.js" defer></script>
-    <script src="./table/jquery.dataTables.min.js"></script>
-    <script src="./table/dataTables.responsive.js"></script>
-    <link href="./table/dataTables.responsive.css" rel="stylesheet" />
-    <link href="./table/jquery.dataTables.css" rel="stylesheet" />
     <link href="./table/jquery-ui.js" />
     <link href="./css/footer.css" rel="stylesheet" />
     <link href="./css/css.css" rel="stylesheet" />
@@ -30,10 +26,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 
     <title>Bureau des Sports IUT Saint-Nazaire</title>
-    <meta name="description"
-        content="Le Bureau des Sports de l’IUT de Saint-Nazaire est une association qui a pour but d’organiser des événements sportifs et festifs pour les 1500 étudiants de l’IUT de Saint-Nazaire.">
-    <meta name="keywords"
-        content="BDS, IUT, SN, IUT Saint-Nazaire, Saint-Nazaire, Bureau des Sports, MLT, TC, GLT, IUT SN, BDS IUT SN, BDS IUT, BDS SN, bdsiutsn, GC, GIM, MP, GCGP, bds.iut.sn, BDS IUT Saint-Nazaire, bds, iut, sn, bds iut sn, bds iut, bds sn, iut sn, bdsiutsn">
+    <meta name="description" content="Le Bureau des Sports de l’IUT de Saint-Nazaire est une association qui a pour but d’organiser des événements sportifs et festifs pour les 1500 étudiants de l’IUT de Saint-Nazaire.">
+    <meta name="keywords" content="BDS, IUT, SN, IUT Saint-Nazaire, Saint-Nazaire, Bureau des Sports, MLT, TC, GLT, IUT SN, BDS IUT SN, BDS IUT, BDS SN, bdsiutsn, GC, GIM, MP, GCGP, bds.iut.sn, BDS IUT Saint-Nazaire, bds, iut, sn, bds iut sn, bds iut, bds sn, iut sn, bdsiutsn">
     <meta name="author" content="Stéfan CORLAY">
     <meta name="country" content="France">
     <meta name="geo.country" content="FR">
@@ -50,7 +44,10 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2MGP41PJSW"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
     gtag('js', new Date());
 
     gtag('config', 'G-2MGP41PJSW');
@@ -70,8 +67,7 @@
                         <li><a class="nav-link" href="#">Accueil</a></li>
                         <li><a class="nav-link" href="/presentation">Présentation</a></li>
                         <li>
-                            <button class="nav-link dropdown-btn" data-dropdown="dropdown1" aria-haspopup="true"
-                                aria-expanded="false" aria-label="discover">
+                            <button class="nav-link dropdown-btn" data-dropdown="dropdown1" aria-haspopup="true" aria-expanded="false" aria-label="discover">
                                 Evènements
                             </button>
                             <div id="dropdown1" class="dropdown">
@@ -89,22 +85,19 @@
                             </div>
                         </li>
                         <li>
-                            <button class="nav-link dropdown-btn" data-dropdown="dropdown2" aria-haspopup="true"
-                                aria-expanded="false" aria-label="discover">
+                            <button class="nav-link dropdown-btn" data-dropdown="dropdown2" aria-haspopup="true" aria-expanded="false" aria-label="discover">
                                 Classements
                                 <i class="bx bx-chevron-down" aria-hidden="true"></i>
                             </button>
                             <div id="dropdown2" class="dropdown">
                                 <ul role="menu">
                                     <li role="menuitem">
-                                        <a class="dropdown-link" href="/classements/equipes"
-                                            style="color: #292c2f;">Classement
+                                        <a class="dropdown-link" href="/classements/equipes" style="color: #292c2f;">Classement
                                             des
                                             équipes</a>
                                     </li>
                                     <li role="menuitem">
-                                        <a class="dropdown-link" href="/classements/promotion"
-                                            style="color: #292c2f;">Classement
+                                        <a class="dropdown-link" href="/classements/promotion" style="color: #292c2f;">Classement
                                             des
                                             promotions</a>
                                     </li>
@@ -135,67 +128,8 @@
             <div class="container-xl">
                 <div class="col-lg-8">
                     <div class="padding-30 rounded bordered">
-                        <div class="row gy-5">
+                        <div class="row gy-5" id="eventsContainer">
 
-                            <div class="col-sm-6">
-                                <div class="post">
-                                    <div class="thumb rounded">
-                                        <a href="/evenements/futsal" class="category-badge position-absolute">Tournoi</a>
-                                            <div class="inner">
-                                                <img src="../img/posts/tren-lg-4.png"  style="max-width: 100%; z-index: -1; height: auto; position: relative; vertical-align: middle" alt="">
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <ul class="meta list-inline mt-4 mb-0">
-                                        <li class="list-inline-item">
-                                            <a href="#">
-                                                <img src="../img/bds-logo-shark.png" class="author" width="30"
-                                                    height="30" alt="Inc Logo">
-                                                BDS IUT SN
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">26 octobre 2023</li>
-                                    </ul>
-                                    <h5 class="post-title mb-3 mt-3">
-                                        <a href="/evenements/futsal">Tournoi Futsal ouvert aux inscriptions !</a>
-                                    </h5>
-                                    <p class="excerpt mb-0">
-                                        Rendez vous au <a href="https://maps.app.goo.gl/sVY8sfA8qYFokFTQ9?g_st=ic" target="_blank" style="color: #292c2f; text-decoration: underline;">Gymnase Heinlex</a> à partir de 14h30 !
-                                    </p>
-                                </div>
-
-
-                            </div>
-                            
-                            <div class="col-sm-6">
-                                <div class="post">
-                                    <div class="thumb rounded">
-                                        <a href="#" class="category-badge position-absolute">Jeu libre</a>
-                                            <div class="inner">
-                                                <img src="../img/posts/tren-lg-3.png"  style="max-width: 100%; z-index: -1; height: auto; position: relative; vertical-align: middle" alt="">
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <ul class="meta list-inline mt-4 mb-0">
-                                        <li class="list-inline-item">
-                                            <a href="#">
-                                                <img src="../img/bds-logo-shark.png" class="author" width="30"
-                                                    height="30" alt="Inc Logo">
-                                                BDS IUT SN
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">16 novembre 2023</li>
-                                    </ul>
-                                    <h5 class="post-title mb-3 mt-3">
-                                        <a href="#">Après-midi raquettes (badminton, ping pong) ouvert à tous !</a>
-                                    </h5>
-                                    <p class="excerpt mb-0">
-                                        Rendez vous au <a href="https://maps.app.goo.gl/sVY8sfA8qYFokFTQ9?g_st=ic" target="_blank" style="color: #292c2f; text-decoration: underline;">Gymnase Heinlex</a> à partir de 14h30 !
-                                    </p>
-                                </div>
-
-
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -203,6 +137,65 @@
 
         </section>
 
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                fetch("https://admin.bdsiutsn.fr/evenements?json=true")
+                    .then(response => response.json())
+                    .then(data => {
+                        const upcomingEvents = data.events.filter(event => !event.past);
+                        const shuffledEvents = shuffleArray(upcomingEvents);
+                        const randomTwoEvents = shuffledEvents.slice(0, 2);
+
+                        renderEvents(randomTwoEvents);
+                    });
+            });
+
+            function shuffleArray(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+                return array;
+            }
+
+            function renderEvents(events) {
+                const eventsContainer = document.getElementById('eventsContainer');
+
+                events.forEach(event => {
+                    const eventDiv = document.createElement('div');
+                    eventDiv.classList.add('col-sm-6');
+
+                    const eventContent = `
+                        <div class="post">
+                            <div class="thumb rounded">
+                                <a href="${event.link}" class="category-badge position-absolute">${event.category}</a>
+                                <div class="inner">
+                                    <img src="${event.image}" style="max-width: 100%; z-index: -1; height: auto; position: relative; vertical-align: middle" alt="">
+                                </div>
+                            </div>
+                            <ul class="meta list-inline mt-4 mb-0">
+                                <li class="list-inline-item">
+                                    <a href="${event.author.link}" target="_blank">
+                                        <img src="${event.author.image}" class="author" width="30" height="30" alt="Author Logo">
+                                        ${event.author.name}
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">${event.date}</li>
+                            </ul>
+                            <h5 class="post-title mb-3 mt-3">
+                                <a href="${event.link}">${event.title}</a>
+                            </h5>
+                            <p class="excerpt mb-0">
+                                ${event.description}
+                            </p>
+                        </div>
+                    `;
+
+                    eventDiv.innerHTML = eventContent;
+                    eventsContainer.appendChild(eventDiv);
+                });
+            }
+        </script>
 
         <!--<div class="instagram-widget">
             <div class="instagram-widget1">
