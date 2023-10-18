@@ -11,6 +11,7 @@
     <link href="./table/jquery.dataTables.css" rel="stylesheet" />
     <link href="./table/jquery-ui.js" />
     <link href="./css/footer.css" rel="stylesheet" />
+    <link href="./css/contact.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <meta charset="UTF-8">
@@ -23,10 +24,10 @@
     <meta http-equiv="content-language" content="fr">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 
-    <title>BDS - Evènements</title>
-    <meta name="description" content="">
+    <title>BDS - Contact</title>
+    <meta name="description" content="Le BDS de l’IUT de Saint-Nazaire est une association qui a pour but d’organiser des événements sportifs et festifs pour les 1500 étudiants de l’IUT de Saint-Nazaire.">
 
-    <meta name="author" content="Bureau des Sports IUT Saint-Nazaire">
+    <meta name="author" content="Stéfan CORLAY">
     <meta name="country" content="France">
     <meta name="geo.country" content="FR">
 
@@ -47,9 +48,11 @@
 
     gtag('config', 'G-2MGP41PJSW');
 </script>
+<!--<div class="spacer" data-height="1000"></div>-->
 
 <body>
-    <header style="padding: 0.5rem; margin: 0 auto;" id="nav-menu" aria-label="navigation bar">
+
+    <header id="nav-menu" style="padding: 0.5rem; margin: 0 auto;" aria-label="navigation bar">
         <div class="container">
             <a class="logo" href="/">
                 <img src="./img/bds-logo-shark.png" width="60" height="60" alt="Inc Logo" />
@@ -57,7 +60,7 @@
             <div class="nav-start">
                 <nav class="menu">
                     <ul class="menu-bar">
-                        <li><a class="nav-link" href=/">Accueil</a></li>
+                        <li><a class="nav-link" href="/">Accueil</a></li>
                         <li><a class="nav-link" href="/presentation">Présentation</a></li>
                         <li>
                             <button class="nav-link dropdown-btn" data-dropdown="dropdown1" aria-haspopup="true"
@@ -99,6 +102,7 @@
                                 </ul>
                             </div>
                         </li>
+                        <li><a class="nav-link" href="#">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -117,14 +121,80 @@
 
     <main style="padding: 1.5rem; margin: 0 auto; max-width: 1100px">
         <div class="containers">
-            <div class="title"></div>
-            <h3 class="zdpjvzelk">Merci pour votre inscription !</h3>
-            <br></br>
-            <h2 class="zdpjvzelk">Nous vous renverrons un message de confirmation concernant votre inscription !</h2>
-            <br></br>
-            <p><a href="/" style="color: #292c2f; ">Retour à l'Accueil</a></p>
+            <div class="titles">
+                <h3>Contactez nous !</h3>
+            </div>
+
+            <!--onsubmit="sendEmail(); reset(); return false;"-->
+            <form action="https://formsubmit.co/eaf3e07df943384d3a5bd24b497ec958" method="POST" id="wrapper">
+                <input type="text" name="_honey" style="display: none;">
+
+                <input type="hidden" name="_url" value="https://bdsiutsn.fr/success-contact">
+
+                <input type="hidden" name="_captcha" value="false">
+
+                <input type="hidden" name="_next" value="https://bdsiutsn.fr/success-contact">
+
+                <input type="hidden" name="_autoresponse"
+                    value="Bonjour, nous vous confirmons que nous avons reçu votre demande.">
+
+                <input id="name" type="text" name="Nom-Prenom" placeholder="Nom - prénom" required="">
+                <input id="email" type="email" name="Email" placeholder="Votre email" required="">
+                <input id="number" type="tel" name="Numéro&nbsp;de&nbsp;téléphone"
+                    placeholder="Votre numéro de téléphone" required="">
+                <input id="subject" type="text" name="Sujet-demande" placeholder="Sujet de votre demande" required="">
+                <textarea name="Demande" placeholder="Indiquez nous votre demande"></textarea>
+                <button type="submit">Envoyer</button>
+
+            </form>
         </div>
+
+        <br></br>
+
+        <!--<div class="titless">
+            <h3>Ou bien contactez les membres du Bureau !</h3>
         </div>
+
+        <section class="nav-contact">
+            <ul class="all-ul">
+                <label for="touch"><span>Président</span></label>
+                <input type="checkbox" id="touch">
+                <ul class="slide">
+                    <li class="contact"><a href="https://www.linkedin.com/in/stefan-corlay/" target="_blank">Stéfan
+                            CORLAY</a></li>
+                    <li class="contact">
+                        <a class="missions-suaps" href="mailto:stefan.corlay@etu.univ-nantes.fr"
+                            target=”_blank”>stefan.corlay@etu.univ-nantes.fr</a>
+                    </li>
+                </ul>
+
+                <label for="touchs"><span>Trésorier</span></label>
+                <input type="checkbox" id="touchs">
+                <ul class="slide">
+                    <li class="contact"><a href="https://www.linkedin.com/in/mahmoud-habib-639465256/"
+                            target="_blank">Mahmoud HABIB</a></li>
+                    <li class="contact">
+                        <a class="missions-suaps" href="mailto:mahmoud.habib@etu.univ-nantes.fr"
+                            target=”_blank”>mahmoud.habib@etu.univ-nantes.fr</a>
+                    </li>
+                </ul>
+            </ul>
+        </section>
+
+        <section class="nav-contacts">
+            <ul class="all-ul">
+                <label for="touchss"><span>Secrétaire</span></label>
+                <input type="checkbox" id="touchss">
+                <ul class="slide">
+                    <li class="contact"><a href="https://www.linkedin.com/in/ma%C3%AFlys-gouret-151626250/"
+                            target="_blank">Mailys GOURET</a></li>
+                    <li class="contact">
+                        <a class="missions-suaps" href="mailto:mailys.gouret@etu.univ-nantes.fr"
+                            target=”_blank”>mailys.gouret@etu.univ-nantes.fr</a>
+                    </li>
+                </ul>
+            </ul>
+        </section>-->
     </main>
 
     <footer class="footer-distributed" style="padding: 2rem; margin: 0 auto; max-width: 1300px;">
