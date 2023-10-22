@@ -5,10 +5,16 @@
     <script src="../table/jquery-1.9.1.js"></script>
     <script src="../table/jquery-ui.js"></script>
     <script src="../app.js" defer></script>
-    <link href="../css/table.css" rel="stylesheet" />
-    <link href="../table/jquery-ui.js" rel="stylesheet" />
+    <script src="../table/jquery.dataTables.min.js"></script>
+    <script src="../table/dataTables.responsive.js"></script>
+    <link href="../table/dataTables.responsive.css" rel="stylesheet" />
+    <link href="../table/jquery.dataTables.css" rel="stylesheet" />
+    <link href="../table/jquery-ui.js" />
     <link href="../css/footer.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/style.css">
+
 
 
     <meta charset="UTF-8">
@@ -21,10 +27,11 @@
     <meta http-equiv="content-language" content="fr">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 
-    <title>BDS - Promotions</title>
-    <meta name="description" content="Le BDS de l’IUT de Saint-Nazaire est une association qui a pour but d’organiser des événements sportifs et festifs pour les 1500 étudiants de l’IUT de Saint-Nazaire.">
+    <title>BDS - Sport O' Campus</title>
+    <meta name="description"
+        content="Le BDS de l’IUT de Saint-Nazaire est une association qui a pour but d’organiser des événements sportifs et festifs pour les 1500 étudiants de l’IUT de Saint-Nazaire.">
 
-    <meta name="author" content="Stéfan CORLAY">
+    <meta name="author" content="Bureau des Sports IUT Saint-Nazaire">
     <meta name="country" content="France">
     <meta name="geo.country" content="FR">
 
@@ -35,87 +42,81 @@
     <meta name="og:image:width" content="">
     <meta name="og:image:height" content="">
 
-
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2MGP41PJSW"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments);
-    }
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-2MGP41PJSW');
 </script>
 
 <body>
-    <script type="text/javascript" charset="utf-8">
-        $(document).ready(function() {
-            $('#example').DataTable({
-                responsive: true,
-                pagingType: "simple",
-                pageLength: 10
-            })
-        });
-    </script>
-
-    <header id="nav-menu" style="padding: 0.5rem; margin: 0 auto;" aria-label="navigation bar">
+    <header style="padding: 0.5rem; margin: 0 auto;" id="nav-menu" aria-label="navigation bar">
         <div class="container">
-            <a class="logo" href="https://bdsiutsn.fr">
-                <img src="../img/bds-logo-shark.png" width="60" height="60" alt="Inc Logo" />
+            <a class="logo" href="/">
+                <img src="../img/bds-logo-shark.png" class="shark" width="60" height="60" alt="Inc Logo" />
             </a>
             <div class="nav-start">
                 <nav class="menu">
                     <ul class="menu-bar">
-                        <li><a class="nav-link" href="https://bdsiutsn.fr">Accueil</a></li>
+                        <li><a class="nav-link" href="/">Accueil</a></li>
                         <li><a class="nav-link" href="/presentation">Présentation</a></li>
                         <li>
-                            <button class="nav-link dropdown-btn" data-dropdown="dropdown1" aria-haspopup="true" aria-expanded="false" aria-label="discover">
+                            <button class="nav-link dropdown-btn" data-dropdown="dropdown1" aria-haspopup="true"
+                                aria-expanded="false" aria-label="discover">
                                 Événements
                             </button>
                             <div id="dropdown1" class="dropdown">
                                 <ul role="menu">
                                     <li role="menuitem">
-                                        <a class="dropdown-link" href="/evenements/evenements" style="color: #292c2f;">Tous les événements à venir</a>
+                                        <a class="dropdown-link" href="/evenements/evenements"
+                                            style="color: #292c2f;">Tous les événements à venir</a>
                                     </li>
                                     <li role="menuitem">
-                                        <a class="dropdown-link" href="/archive/inscription" style="color: #292c2f;">Inscription Championnat</a>
+                                        <a class="dropdown-link" href="/archive/inscription"
+                                            style="color: #292c2f;">Inscription Championnat</a>
                                     </li>
                                     <li role="menuitem">
-                                        <a class="dropdown-link" href="/evenements/futsal" style="color: #292c2f;">Inscription Tournoi Futsal</a>
+                                        <a class="dropdown-link" href="/evenements/futsal"
+                                            style="color: #292c2f;">Inscription Tournoi
+                                            Futsal</a>
                                     </li>
                                     <li role="menuitem">
-                                        <a class="dropdown-link" href="/evenements/sportocampus" style="color: #292c2f;">Sport O' Campus</a>
+                                        <a class="dropdown-link" href="#" style="color: #292c2f;">Sport O' Campus</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
                         <li>
-                            <button class="nav-link dropdown-btn" data-dropdown="dropdown2" aria-haspopup="true" aria-expanded="false" aria-label="discover">
+                            <button class="nav-link dropdown-btn" data-dropdown="dropdown2" aria-haspopup="true"
+                                aria-expanded="false" aria-label="discover">
                                 Classements
                                 <i class="bx bx-chevron-down" aria-hidden="true"></i>
                             </button>
                             <div id="dropdown2" class="dropdown">
                                 <ul role="menu">
                                     <li role="menuitem">
-                                        <a class="dropdown-link" href="/classements/equipes" style="color: #292c2f;">Classement
+                                        <a class="dropdown-link" href="/classements/equipes"
+                                            style="color: #292c2f;">Classement
                                             des
                                             équipes</a>
                                     </li>
                                     <li role="menuitem">
-                                        <a class="dropdown-link" href="#" style="color: #292c2f;">Classements de
+                                        <a class="dropdown-link" href="/classements/promotion"
+                                            style="color: #292c2f;">Classement
+                                            des
                                             promotions</a>
                                     </li>
                                 </ul>
                             </div>
+
                         </li>
                     </ul>
                 </nav>
             </div>
-
-
 
             <div class="nav-end">
                 <button id="hamburger" aria-label="hamburger" aria-haspopup="true" aria-expanded="false">
@@ -129,56 +130,31 @@
         </div>
     </header>
 
-    <main style="padding: 1.5rem; margin: 0 auto; max-width: 800px">
-        <h1>Classement des promotions :</h1>
-        <br><br>
-        <div id="example-container">
-            <table id="example" class="display" cellspacing="0" width="100%">
-                <thead>
-                    <tr>
-                        <th>Promotion</th>
-                        <th>Points</th>
-                        <th>Rang</th>
-                        <th>Equipes</th>
-                    </tr>
-                </thead>
+    <main style="padding: 1.5rem; margin: 0 auto; max-width: 1200px">
 
-                <tbody>
-                </tbody>
-            </table>
+        <div class="titles">
+            <h1 style="color:#292c2f;">Sport O'Campus</h3>
         </div>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                fetch('https://admin.bdsiutsn.fr/promotions?json=true')
-                    .then(response => response.json())
-                    .then(data => {
-                        populateTable(data);
-                    });
-            });
 
-            function populateTable(data) {
-                const tbody = document.querySelector('#example tbody');
-                const sortedData = data.sort((a, b) => {
-                    const rankA = a.rank || 999999;
-                    const rankB = b.rank || 999999;
-                    return rankA - rankB;
-                });
+        <p class="excerpt mb-0" style="font-size: 1.5em; align-items: center; justify-content: center;">
+            Sport O'Campus c'est l'événement sportif de l'année sur le bassin nazairien.
+            Cet événement permet chaque année aux étudiants de tout St Nazaire de se retrouver ou d'apprendre à se
+            connaître lors de différentes rencontres sportives. <br>
+            Notre objectif étant de redynamiser la vie sportive étudiante. <br>
 
-                sortedData.forEach(team => {
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td>${team.name}</td>
-                        <td>${team.points}</td>
-                        <td>${team.rank || '-'}</td>
-                        <td>${team.teams || '-'}</td>
-                    `;
-                    tbody.appendChild(row);
-                });
-            }
-        </script>
+            Programme : <br>
+            <br>
+            14-16h : Volley 🏐 (libre)<br>
+            16h-18h : Basket 🏀 (libre)<br>
+            18-22h30 : Tournoi de Futsal ⚽ (sur inscription)<br>
+            <br>
+            14h à 18h : Tennis de table 🏓 (libre)<br>
 
-        <br><br>
-        <!--<h1><a href="https://bdsiutsn.fr" style="color: #292c2f;">Retour à l'Accueil</a></h1>-->
+            <br>
+            On vous attend nombreux lors de cet évènement grandiose.<br>
+            <br>
+            <u>L'équipe de Cap O'Campus</u>
+        </p>
     </main>
 
     <footer class="footer-distributed" style="padding: 2rem; margin: 0 auto; max-width: 1300px;">
@@ -190,10 +166,13 @@
         </div>
 
         <div class="footer-left">
-            <a href="/social/site" style="cursor:pointer; text-decoration: none;" target="_blank"><i class="fa fa-location-arrow" style="text-indent: -20px; color: #292c2f;" ></i><b style="color: #292c2f;">58 Rue Michel Ange , 44600 Saint-Nazaire</b></a>
+            <a href="/social/site" style="cursor:pointer; text-decoration: none;" target="_blank"><i
+                    class="fa fa-location-arrow" style="text-indent: -20px; color: #292c2f;"></i><b
+                    style="color: #292c2f;">58 Rue Michel Ange , 44600 Saint-Nazaire</b></a>
         </div>
 
     </footer>
+
 </body>
 
 </html>
