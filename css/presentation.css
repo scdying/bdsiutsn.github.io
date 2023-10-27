@@ -1,11 +1,6 @@
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
     .bds-img {
-        width: 300;
-        height: 100
+        width: 100%;
+        height: 100%;
     }
-}
-
-img.bds-img {
-    width: 100%;
-    height: 100%;
 }
