@@ -26,8 +26,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 
     <title>Bureau des Sports IUT Saint-Nazaire</title>
-    <meta name="description" content="Le Bureau des Sports de l’IUT de Saint-Nazaire est une association qui a pour but d’organiser des événements sportifs et festifs pour les 1500 étudiants de l’IUT de Saint-Nazaire.">
-    <meta name="keywords" content="BDS, IUT, SN, IUT Saint-Nazaire, Saint-Nazaire, Bureau des Sports, MLT, TC, GLT, IUT SN, BDS IUT SN, BDS IUT, BDS SN, bdsiutsn, GC, GIM, MP, GCGP, bds.iut.sn, BDS IUT Saint-Nazaire, bds, iut, sn, bds iut sn, bds iut, bds sn, iut sn, bdsiutsn">
+    <meta name="description"
+        content="Le Bureau des Sports de l’IUT de Saint-Nazaire est une association qui a pour but d’organiser des événements sportifs et festifs pour les 1500 étudiants de l’IUT de Saint-Nazaire.">
+    <meta name="keywords"
+        content="BDS, IUT, SN, IUT Saint-Nazaire, Saint-Nazaire, Bureau des Sports, MLT, TC, GLT, IUT SN, BDS IUT SN, BDS IUT, BDS SN, bdsiutsn, GC, GIM, MP, GCGP, bds.iut.sn, BDS IUT Saint-Nazaire, bds, iut, sn, bds iut sn, bds iut, bds sn, iut sn, bdsiutsn">
     <meta name="author" content="Stéfan CORLAY">
     <meta name="country" content="France">
     <meta name="geo.country" content="FR">
@@ -67,34 +69,40 @@
                         <li><a class="nav-link" href="#">Accueil</a></li>
                         <li><a class="nav-link" href="/presentation">Le Bureau</a></li>
                         <li>
-                            <button class="nav-link dropdown-btn" data-dropdown="dropdown1" aria-haspopup="true" aria-expanded="false" aria-label="discover">
+                            <button class="nav-link dropdown-btn" data-dropdown="dropdown1" aria-haspopup="true"
+                                aria-expanded="false" aria-label="discover">
                                 Événements
                             </button>
                             <div id="dropdown1" class="dropdown">
                                 <ul role="menu">
                                     <li role="menuitem">
-                                        <a class="dropdown-link" href="/evenements/evenements" style="color: #292c2f;">Tous les événements à venir</a>
+                                        <a class="dropdown-link" href="/evenements/evenements"
+                                            style="color: #292c2f;">Tous les événements à venir</a>
                                     </li>
                                     <li role="menuitem">
-                                        <a class="dropdown-link" href="/evenements/handball" style="color: #292c2f;">Tournoi Handball</a>
+                                        <a class="dropdown-link" href="/evenements/handball"
+                                            style="color: #292c2f;">Tournoi Handball</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
                         <li>
-                            <button class="nav-link dropdown-btn" data-dropdown="dropdown2" aria-haspopup="true" aria-expanded="false" aria-label="discover">
+                            <button class="nav-link dropdown-btn" data-dropdown="dropdown2" aria-haspopup="true"
+                                aria-expanded="false" aria-label="discover">
                                 Classements
                                 <i class="bx bx-chevron-down" aria-hidden="true"></i>
                             </button>
                             <div id="dropdown2" class="dropdown">
                                 <ul role="menu">
                                     <li role="menuitem">
-                                        <a class="dropdown-link" href="/classements/equipes" style="color: #292c2f;">Classement
+                                        <a class="dropdown-link" href="/classements/equipes"
+                                            style="color: #292c2f;">Classement
                                             des
                                             équipes</a>
                                     </li>
                                     <li role="menuitem">
-                                        <a class="dropdown-link" href="/classements/promotion" style="color: #292c2f;">Classement
+                                        <a class="dropdown-link" href="/classements/promotion"
+                                            style="color: #292c2f;">Classement
                                             des
                                             promotions</a>
                                     </li>
@@ -121,6 +129,110 @@
 
         <h1>Bienvenue sur le site du Bureau des Sports de l'IUT de Saint-Nazaire !</h1>
 
+        <style>
+            .pics {
+                max-width: 100%;
+            }
+            
+            .slideshow {
+
+                position: relative;
+                max-width: 600px;
+                aspect-ratio: 3/2;
+                border-radius: .75rem;
+                overflow: hidden;
+                margin: 3rem auto;
+                margin-bottom: 1rem;
+            }
+
+            .slideshow .pics {
+                top: 0;
+                margin: 0;
+                left: 0;
+                animation: slideshow 25s ease infinite;
+                position: absolute;
+                opacity: 0;
+            }
+
+            @keyframes slideshow {
+
+                0% {
+                    opacity: 0
+                }
+
+                10% {
+                    opacity: 1
+                }
+
+                20% {
+                    opacity: 1
+                }
+
+                25% {
+                    opacity: 0
+                }
+
+                100% {
+                    opacity: 0
+                }
+            }
+
+
+            .slideshow .pics:nth-child(2) {
+                animation-delay: 5s;
+            }
+
+            .slideshow .pics:nth-child(3) {
+                animation-delay: 10s;
+            }
+
+            .slideshow .pics:nth-child(4) {
+                animation-delay: 15s;
+            }
+
+            .slideshow .pics:nth-child(5) {
+                animation-delay: 20s;
+            }
+
+            .indicateur {
+                width: 100%;
+                height: 6px;
+                background: rgba(255, 255, 255, 0.52);
+                position: absolute;
+                bottom: 0;
+                transform-origin: left;
+                animation: indication 5s ease infinite;
+            }
+
+            @keyframes indication {
+
+                from {
+
+                    transform: scalex(0);
+
+                }
+
+                to {
+
+                    transform: scalex(100%)
+                }
+
+            }
+        </style>
+
+        <div class="slideshow">
+
+            <img src="/img/pics/1.JPG" alt="" class="pics">
+            <img src="/img/pics/3.JPG" alt="" class="pics">
+            <img src="/img/pics/4.JPG" alt="" class="pics">
+            <img src="/img/pics/5.JPG" alt="" class="pics">
+            <img src="/img/pics/6.JPG" alt="" class="pics">
+            <div class=indicateur></div>
+
+        </div>
+
+        <p style="display: flex; justify-content: center; text-decoration: underline;">Résumé en image de notre tournoi de Futsal</p>
+
         <section class="main-content">
             <div class="container-xl">
                 <div class="col-lg-8">
@@ -135,7 +247,7 @@
         </section>
 
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('DOMContentLoaded', function () {
                 fetch("https://admin.bdsiutsn.fr/evenements?json=true")
                     .then(response => response.json())
                     .then(data => {
