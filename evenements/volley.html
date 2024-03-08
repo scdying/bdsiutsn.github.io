@@ -5,11 +5,17 @@
     <script src="../table/jquery-1.9.1.js"></script>
     <script src="../table/jquery-ui.js"></script>
     <script src="../app.js" defer></script>
+    <script src="../table/jquery.dataTables.min.js"></script>
+    <script src="../table/dataTables.responsive.js"></script>
+    <link href="../table/dataTables.responsive.css" rel="stylesheet" />
+    <link href="../table/jquery.dataTables.css" rel="stylesheet" />
     <link href="../table/jquery-ui.js" />
     <link href="../css/footer.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/style.css">
+
+
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,8 +27,9 @@
     <meta http-equiv="content-language" content="fr">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 
-    <title>BDS - Actualités</title>
-    <meta name="description" content="Le BDS de l’IUT de Saint-Nazaire est une association qui a pour but d’organiser des événements sportifs et festifs pour les 1500 étudiants de l’IUT de Saint-Nazaire.">
+    <title>BDS - Volley-Ball</title>
+    <meta name="description"
+        content="Le BDS de l’IUT de Saint-Nazaire est une association qui a pour but d’organiser des événements sportifs et festifs pour les 1500 étudiants de l’IUT de Saint-Nazaire.">
 
     <meta name="author" content="Bureau des Sports IUT Saint-Nazaire">
     <meta name="country" content="France">
@@ -40,10 +47,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2MGP41PJSW"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments);
-    }
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-2MGP41PJSW');
@@ -61,13 +65,15 @@
                         <li><a class="nav-link" href="/">Accueil</a></li>
                         <li><a class="nav-link" href="/presentation">Le Bureau</a></li>
                         <li>
-                            <button class="nav-link dropdown-btn" data-dropdown="dropdown1" aria-haspopup="true" aria-expanded="false" aria-label="discover">
+                            <button class="nav-link dropdown-btn" data-dropdown="dropdown1" aria-haspopup="true"
+                                aria-expanded="false" aria-label="discover">
                                 Événements
                             </button>
                             <div id="dropdown1" class="dropdown">
                                 <ul role="menu">
                                     <li role="menuitem">
-                                        <a class="dropdown-link" href="#" style="color: #292c2f;">Tous les événements à venir</a>
+                                        <a class="dropdown-link" href="/evenements/evenements"
+                                            style="color: #292c2f;">Tous les événements à venir</a>
                                     </li>
                                     <li role="menuitem">
                                         <a class="dropdown-link" href="/evenements/volley"
@@ -77,20 +83,24 @@
                             </div>
                         </li>
                         <li><a class="nav-link" href="https://iut-sn.univ-nantes.fr/medias/fichier/planning-activites-physiques-et-sportives_1694176948405-pdf?ID_FICHE=1637662&INLINE=FALSE">Sport à l'IUT</a></li>
+
                         <!--<li>
-                            <button class="nav-link dropdown-btn" data-dropdown="dropdown2" aria-haspopup="true" aria-expanded="false" aria-label="discover">
+                            <button class="nav-link dropdown-btn" data-dropdown="dropdown2" aria-haspopup="true"
+                                aria-expanded="false" aria-label="discover">
                                 Classements
                                 <i class="bx bx-chevron-down" aria-hidden="true"></i>
                             </button>
                             <div id="dropdown2" class="dropdown">
                                 <ul role="menu">
                                     <li role="menuitem">
-                                        <a class="dropdown-link" href="/classements/equipes" style="color: #292c2f;">Classement
+                                        <a class="dropdown-link" href="/classements/equipes"
+                                            style="color: #292c2f;">Classement
                                             des
                                             équipes</a>
                                     </li>
                                     <li role="menuitem">
-                                        <a class="dropdown-link" href="/classements/promotion" style="color: #292c2f;">Classement
+                                        <a class="dropdown-link" href="/classements/promotion"
+                                            style="color: #292c2f;">Classement
                                             des
                                             promotions</a>
                                     </li>
@@ -114,92 +124,26 @@
         </div>
     </header>
 
-    <main style="padding: 1.5rem; margin: 0 auto; max-width: 1300px">
+    <main style="padding: 1.5rem; margin: 0 auto; max-width: 1200px">
 
         <div class="titles">
-            <h1 style="color:#292c2f;">Tous les évènements sportifs à venir ! 🎉</h3>
+            <h1 style="color:#292c2f;">Inscription Tournoi de Volley-Ball</h3>
         </div>
 
-        <section class="main-content">
-            <div class="container-xl">
-                <div class="col-lg-8">
-                    <div class="padding-30 rounded bordered">
-                        <div class="row gy-5" id="eventsContainer">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <p class="excerpt mb-0" style="font-size: 1.5em; align-items: center; justify-content: center;">
+            Venez participer au tournoi de volley-ball organisé par le Bureau des sports de l'IUT de Saint-Nazaire ! Une
+            buvette sera disponible tout au long du tournoi.
+            Rendez vous le mardi 26 mars 2024 au <a href="https://maps.app.goo.gl/sVY8sfA8qYFokFTQ9?g_st=ic"
+                target="_blank" style="color: #292c2f; text-decoration: underline;">Gymnase Heinlex</a> à partir de
+            18h30 ! <!--<a href="/img/Tournoi Hand.svg"
+            target="_blank" style="color: #292c2f; text-decoration: underline;">(Voir l'affiche)</a>-->
+            <br></br>
+            Attention, le prix du billet sur helloasso est le montant d'inscription d'une équipe et non pas d'un participant !
+        </p>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                fetch("https://admin.bdsiutsn.fr/evenements?json=true")
-                    .then(response => response.json())
-                    .then(data => {
-                        const upcomingEvents = data.events.filter(event => !event.past);
-                        const pastEvents = data.events.filter(event => event.past);
-                        renderEvents(upcomingEvents, 'eventsContainer');
-                        renderEvents(pastEvents, 'pastEventsContainer');
-                    });
-            });
-
-            function renderEvents(events, containerId) {
-                const eventsContainer = document.getElementById(containerId);
-
-                events.forEach(event => {
-                    const eventDiv = document.createElement('div');
-                    eventDiv.classList.add('col-sm-6');
-
-                    const eventContent = `
-                        <div class="post">
-                            <div class="thumb rounded">
-                                <a href="${event.link}" class="category-badge position-absolute">${event.category}</a>
-                                <div class="inner">
-                                    <img src="${event.image}" style="max-width: 100%; z-index: -1; height: auto; position: relative; vertical-align: middle" alt="">
-                                </div>
-                            </div>
-                            <ul class="meta list-inline mt-4 mb-0">
-                                <li class="list-inline-item">
-                                    <a href="${event.author.link}" target="_blank">
-                                        <img src="${event.author.image}" class="author" width="30" height="30" alt="Author Logo">
-                                        ${event.author.name}
-                                    </a>
-                                </li>
-                                <li class="list-inline-item">${event.date}</li>
-                            </ul>
-                            <h5 class="post-title mb-3 mt-3">
-                                <a href="${event.link}">${event.title}</a>
-                            </h5>
-                            <p class="excerpt mb-0">
-                                ${event.description}
-                            </p>
-                        </div>
-                    `;
-
-                    eventDiv.innerHTML = eventContent;
-                    eventsContainer.appendChild(eventDiv);
-                });
-            }
-        </script>
-
-        <br></br>
-
-        <div class="titles">
-            <h1 style="color:#292c2f;">Tous les événements passés ! 🎉</h3>
-        </div>
-
-        <section class="main-content">
-            <div class="container-xl">
-                <div class="col-lg-8">
-                    <div class="padding-30 rounded bordered">
-                        <div class="row gy-5" id="pastEventsContainer">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <br></br>
+        <iframe id="haWidget" allowtransparency="true" scrolling="auto"
+            src="https://www.helloasso.com/associations/bureau-des-sports-iut-saint-nazaire/evenements/tournoi-volley-ball/widget"
+            style="width: 100%; height: 700px; border: none;"></iframe>
     </main>
 
     <footer class="footer-distributed" style="padding: 2rem; margin: 0 auto; max-width: 1300px;">
@@ -211,7 +155,9 @@
         </div>
 
         <div class="footer-left">
-            <a href="/social/site" style="cursor:pointer; text-decoration: none;" target="_blank"><i class="fa fa-location-arrow" style="text-indent: -20px; color: #292c2f;" ></i><b style="color: #292c2f;">58 Rue Michel Ange , 44600 Saint-Nazaire</b></a>
+            <a href="/social/site" style="cursor:pointer; text-decoration: none;" target="_blank"><i
+                    class="fa fa-location-arrow" style="text-indent: -20px; color: #292c2f;"></i><b
+                    style="color: #292c2f;">58 Rue Michel Ange , 44600 Saint-Nazaire</b></a>
         </div>
 
     </footer>
