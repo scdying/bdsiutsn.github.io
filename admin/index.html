@@ -10,17 +10,20 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <style>
-         :root {
-            --bg-color: #1a202c;
-            --primary-color: #2d3748;
-            --accent-color: #4a90e2;
+        :root {
+            --bg-color: linear-gradient(to bottom, #485563, #29323c);
+            ;
+            --primary-color: #29323c;
+            --accent-color:#27ae60;
             --text-color: #f7f9fc;
+            --input-bg-color: rgba(255, 255, 255, 0.2);
+            --button-hover-bg-color: #2ecc71;
             --font: 'Poppins', sans-serif;
         }
-        
+
         body {
             font-family: var(--font);
-            background-color: var(--bg-color);
+            background: var(--bg-color);
             color: var(--text-color);
             margin: 0;
             padding: 0;
@@ -28,71 +31,83 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            background-size: cover;
         }
-        
+
         .container {
             max-width: 800px;
             padding: 20px;
             text-align: center;
         }
-        
+
         header {
             margin-bottom: 20px;
         }
-        
+
         form {
             background: var(--primary-color);
             padding: 20px;
             border-radius: 8px;
             display: inline-block;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        
+
         form label,
         form button {
             width: 50%;
             margin: 10px 0;
         }
-        
+
         form input {
             width: 70%;
             margin: 10px 0;
+            background-color: var(--input-bg-color);
+            color: white;
         }
-        
+
         form input {
             padding: 8px 10px;
             border-radius: 25px;
-            border: none;
+            border: 1px solid #ffffff50;
             outline: none;
             font-size: 14px;
             text-align: center;
         }
-        
+
         form button {
-            background: #007bff;
+            background: var(--accent-color);
             color: var(--text-color);
-            padding: 8px 20px;
+            padding: 10px 25px;
             border: none;
-            border-radius: 25px;
+            border-radius: 30px;
             cursor: pointer;
-            font-size: 14px;
+            font-size: 16px;
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
         }
-        
-        form button:hover {
-            background-color: #0056b3
+
+        form button:hover,
+        form button:focus {
+            background-color: var(--button-hover-bg-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
-        
+
         @keyframes breathe {
+
             0%,
             100% {
                 transform: scale(1);
                 opacity: 0.9;
             }
+
             50% {
-                transform: scale(1.14);
+                transform: scale(1.05);
                 opacity: 1;
             }
         }
-        
+
         header img {
             animation: breathe 2s infinite ease-in-out;
         }
@@ -106,6 +121,8 @@
         </header>
 
         <form action="https://admin.bdsiutsn.fr/login" method="POST" id="loginForm">
+            <center><label for="username"><b>Identifiant</b> 🔑</label></center>
+            <input type="text" id="username" name="username">
             <center><label for="password"><b>Mot de passe</b> 🔒</label></center>
             <input type="password" id="password" name="password">
             <button type="submit">Connexion</button>
