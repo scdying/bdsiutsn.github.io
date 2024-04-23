@@ -14,8 +14,8 @@
     --light-grey: #eeeeee;
     --ash: #f4f4f4;
     --primary-color: #2b72fb;
-    --white: white;
-    --customgrey: #292c2f;
+    --white: #1a202c;
+    --customgrey: #1a202c;
     --border: 1px solid var(--light-grey);
     --shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
         rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
@@ -23,7 +23,7 @@
 
 body {
     font-family: inherit;
-    background-color: var(--white);
+    background-color: #1a202c;
     color: var(--dark-grey);
     letter-spacing: -0.4px;
 }
@@ -148,7 +148,7 @@ h3 {
     min-width: 60px;
     margin: 0 0.6rem;
     font-weight: 600;
-    color: #292c2f;
+    color: #fff;
 }
 
 .menu-bar .nav-link:hover,
@@ -181,7 +181,7 @@ h3 {
     border-style:solid;
     border-color: #292c2f;
     border-width: 1px;
-    background-color: white;
+    background-color: var(--white);
 }
 
 .dropdown.active {
@@ -265,7 +265,7 @@ h3 {
     position: absolute;
     top: 0.75rem;
     right: 0.75rem;
-    color: var(--customgrey)
+    color: #fff
 }
 
 #hamburger .openIcon {
@@ -907,7 +907,7 @@ a:hover {
     height: 50px;
     border-radius: 8px;
     border: none;
-    background-color: var(--customgrey);
+    background-color: #fff;
     color: white;
     font-weight: bold;
     font-size: 1em;
