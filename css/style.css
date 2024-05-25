@@ -36,6 +36,109 @@ a {
     color: white;
 }
 
+.planning_sports {
+	padding-top: 20px;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	color: white;
+	padding-bottom: 50px;
+}
+
+.planning_sports p {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.planning_sports a {
+	color: white;
+}
+
+.planning_sports table {
+	border-collapse: collapse;
+	margin: auto;
+	background-color: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(2px);
+	box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+
+
+	z-index: 10000;
+	overflow-x: auto;
+	max-width: 70%;
+	display: inline-block;
+	height: 75%;
+}
+
+.planning_sports tbody td,
+th {
+	border-width: 0.5px;
+	border-style: solid;
+	border-color: black;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	min-width: 100px;
+	color: white;
+	width: 150px;
+}
+
+.planning_sports tbody th {
+	min-width: 200px;
+	width: 200px;
+}
+
+.planning_sports thead th {
+	background-color: #630707;
+	color: white;
+	font-weight: normal;
+	font-size: 1.3em;
+	padding-top: 15px;
+	padding-bottom: 15px;
+    min-width: 200px;
+}
+
+.planning_sports td,
+.planning th {
+	text-align: center;
+}
+
+.planning_sports p {
+	margin-right: 10%;
+	margin-left: 10%;
+}
+
+.planning_sports center {
+	margin-top: 5%;
+}
+
+.sport_table {
+	font-size: 1.1rem;
+	font-weight: bold;
+
+}
+
+.sport_colone {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.sport_group_table {
+	font-weight: normal;
+}
+
+.full_table {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.horaires_table {
+	text-decoration: underline;
+}
+
+.lieu_table,
+.remarque_table {
+	font-style: italic;
+}
+
+
 button {
     border: none;
     background-color: transparent;
