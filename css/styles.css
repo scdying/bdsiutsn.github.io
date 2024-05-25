@@ -1155,7 +1155,7 @@ li.list-inline-item {
 }
 
 .widget ul.list li a {
-    color: #203656;
+    color: white;
     font-weight: 700;
 }
 
@@ -1195,7 +1195,7 @@ li.list-inline-item {
 .newsletter-headline {
     font-size: 15px;
     font-weight: bold;
-    color: #203656;
+    color: white;
     display: block;
 }
 
