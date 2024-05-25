@@ -58,7 +58,7 @@
 
 <body>
 
-    <!--<header id="nav-menu" style="padding: 0.5rem; margin: 0 auto; " aria-label="navigation bar">
+    <header id="nav-menu" style="padding: 0.5rem; margin: 0 auto; " aria-label="navigation bar">
         <div class="container">
             <a class="logo" href="/">
                 <img src="./img/bds-logo-shark.png" width="60" height="60" alt="Inc Logo" />
@@ -82,8 +82,27 @@
                                 </ul>
                             </div>
                         </li>
-                        <li><a class="nav-link" href="https://iut-sn.univ-nantes.fr/medias/fichier/planning-activites-physiques-et-sportives_1694176948405-pdf?ID_FICHE=1637662&INLINE=FALSE">Sport à l'IUT</a></li>-->
+
+                        <li>
+                            <button class="nav-link dropdown-btn" data-dropdown="dropdown1" aria-haspopup="true"
+                                aria-expanded="false" aria-label="discover">
+                                Sport à l'IUT
+                            </button>
+                            <div id="dropdown1" class="dropdown">
+                                <ul role="menu">
+                                    <li role="menuitem">
+                                        <a class="dropdown-link" href="/sportiut"
+                                            style="color: #fff;">Les sports</a>
+                                    </li>
+                                    <li role="menuitem">
+                                        <a class="dropdown-link" href="/horaires-sport"
+                                            style="color: #fff;">Horaires d'entraînements</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
                         
+                        <!--https://iut-sn.univ-nantes.fr/medias/fichier/planning-activites-physiques-et-sportives_1694176948405-pdf?ID_FICHE=1637662&INLINE=FALSE-->
                         <!--<li>
                             <button class="nav-link dropdown-btn" data-dropdown="dropdown2" aria-haspopup="true"
                                 aria-expanded="false" aria-label="discover">
@@ -106,7 +125,7 @@
                                     </li>
                                 </ul>
                             </div>
-                        </li>
+                        </li>-->
                     </ul>
                 </nav>
             </div>
@@ -121,24 +140,15 @@
                 </button>
             </div>
         </div>
-    </header>-->
+    </header>
 
     <main style="padding: 1.5rem; margin: 0 auto; max-width: 1200px">
 
         <br>
         <br>
-        <br>
-        <br>
-        <br>
-        <br> <br>
-        <br>
-        <br>
-        <br>
-        <br>
 
-    
-        <h1>Le site du Bureau des Sports de l'IUT de Saint-Nazaire revient bientôt !</h1>
-        <!--<h1>Bienvenue sur le site du Bureau des Sports de l'IUT de Saint-Nazaire !</h1>
+
+        <h1>Bienvenue sur le site du Bureau des Sports de l'IUT de Saint-Nazaire !</h1>
 
         <style>
             .pics {
@@ -312,7 +322,7 @@
                     eventsContainer.appendChild(eventDiv);
                 });
             }
-        </script>-->
+        </script>
 
         <!--<div class="instagram-widget">
             <div class="instagram-widget1">
@@ -509,7 +519,7 @@
 
     </main>
 
-    <!--<footer class="footer-distributed" style="padding: 2rem; margin: 0 auto; max-width: 1300px;">
+    <footer class="footer-distributed" style="padding: 2rem; margin: 0 auto; max-width: 1300px;">
         <div class="footer-right">
             <a href="mailto:bds.iutsn.contact@gmail.com" target=”_blank”><i class="fa fa-envelope"></i></a>
             <a href="/social/instagram" target=”_blank”><i class="fa fa-instagram"></i></a>
@@ -523,7 +533,7 @@
                     style="color: #fff;">58 Rue Michel Ange , 44600 Saint-Nazaire</b></a>
         </div>
 
-    </footer>-->
+    </footer>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <script src="./table/jquery-1.9.1.js"></script>
+    <script src="./table/jquery-ui.js"></script>
+    <script src="./app.js" defer></script>
+    <script src="./table/jquery.dataTables.min.js"></script>
+    <script src="./table/dataTables.responsive.js"></script>
+    <link href="./table/dataTables.responsive.css" rel="stylesheet" />
+    <link href="./table/jquery.dataTables.css" rel="stylesheet" />
+    <link href="./table/jquery-ui.js" />
+    <link href="./css/footer.css" rel="stylesheet" />
+    <link href="./css/css.css" rel="stylesheet" />
+    <link href="./css/presentation.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel=" stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="/css/styles1.css">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="shortcut icon" href="./img/bds-logo-shark.png">
+
+    <meta name="fragment" content="!">
+    <meta http-equiv="content-language" content="fr">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+
+    <title>Sport à l'IUT</title>
+    <meta name="description"
+        content="Le Bureau des Sports de l’IUT de Saint-Nazaire est une association qui a pour but d’organiser des événements sportifs et festifs pour les 1500 étudiants de l’IUT de Saint-Nazaire.">
+    <meta name="keywords"
+        content="BDS, IUT, SN, IUT Saint-Nazaire, Saint-Nazaire, Bureau des Sports, MLT, TC, GLT, IUT SN, BDS IUT SN, BDS IUT, BDS SN, bdsiutsn, GC, GIM, MP, GCGP, bds.iut.sn, BDS IUT Saint-Nazaire, bds, iut, sn, bds iut sn, bds iut, bds sn, iut sn, bdsiutsn">
+    <meta name="author" content="Stéfan CORLAY">
+    <meta name="country" content="France">
+    <meta name="geo.country" content="FR">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Bureau des Sports IUT Saint-Nazaire">
+    <meta name="og:image" content="./img/bds-logo-shark.png">
+    <meta name="og:image:width" content="">
+    <meta name="og:image:height" content="">
+
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2MGP41PJSW"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-2MGP41PJSW');
+</script>
+<!--<div class="spacer" data-height="1000"></div>-->
+
+<body>
+
+    <header id="nav-menu" style="padding: 0.5rem; margin: 0 auto; " aria-label="navigation bar">
+        <div class="container">
+            <a class="logo" href="/">
+                <img src="./img/bds-logo-shark.png" width="60" height="60" alt="Inc Logo" />
+            </a>
+            <div class="nav-start">
+                <nav class="menu" style="background-color: #1a202c;">
+                    <ul class="menu-bar">
+                        <li><a class="nav-link" href="/">Accueil</a></li>
+                        <li><a class="nav-link" href="/presentation">Le Bureau</a></li>
+                        <li>
+                            <button class="nav-link dropdown-btn" data-dropdown="dropdown1" aria-haspopup="true"
+                                aria-expanded="false" aria-label="discover">
+                                Événements
+                            </button>
+                            <div id="dropdown1" class="dropdown">
+                                <ul role="menu">
+                                    <li role="menuitem">
+                                        <a class="dropdown-link" href="/evenements/evenements" style="color: #fff;">Tous
+                                            les événements à venir</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li>
+                            <button class="nav-link dropdown-btn" data-dropdown="dropdown2" aria-haspopup="true"
+                                aria-expanded="false" aria-label="discover">
+                                Sport à l'IUT
+                            </button>
+                            <div id="dropdown2" class="dropdown">
+                                <ul role="menu">
+                                    <li role="menuitem">
+                                        <a class="dropdown-link" href="#" style="color: #fff;">Les Sports</a>
+                                    </li>
+                                    <li role="menuitem">
+                                        <a class="dropdown-link" href="/horaires-sport" style="color: #fff;">Horaires
+                                            d'entraînements</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!--<li>
+                            <button class="nav-link dropdown-btn" data-dropdown="dropdown2" aria-haspopup="true"
+                                aria-expanded="false" aria-label="discover">
+                                Classements
+                                <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                            </button>
+                            <div id="dropdown2" class="dropdown">
+                                <ul role="menu">
+                                    <li role="menuitem">
+                                        <a class="dropdown-link" href="/classements/equipes"
+                                            style="color: #292c2f;">Classement
+                                            des
+                                            équipes</a>
+                                    </li>
+                                    <li role="menuitem">
+                                        <a class="dropdown-link" href="/classements/promotion"
+                                            style="color: #292c2f;">Classement
+                                            des
+                                            promotions</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>-->
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="nav-end">
+                <button id="hamburger" aria-label="hamburger" aria-haspopup="true" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="openIcon">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding: 1.5rem; margin: 0 auto; max-width: 1300px">
+
+    
+    </main>
+
+    <footer class="footer-distributed" style="padding: 2rem; margin: 0 auto; max-width: 1300px;">
+        <div class="footer-right">
+            <a href="mailto:bds.iutsn.contact@gmail.com" target=”_blank”><i class="fa fa-envelope"></i></a>
+            <a href="/social/instagram" target=”_blank”><i class="fa fa-instagram"></i></a>
+            <a href="/social/linkedin" target=”_blank”><i class="fa fa-linkedin"></i></a>
+            </a>
+        </div>
+
+        <div class="footer-left">
+            <a href="/social/site" style="cursor:pointer; text-decoration: none;" target="_blank"><i
+                    class="fa fa-location-arrow" style="text-indent: -20px; color: #fff;"></i><b style="color: #fff;">58
+                    Rue Michel Ange , 44600 Saint-Nazaire</b></a>
+        </div>
+
+    </footer>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.sticky-sidebar.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
