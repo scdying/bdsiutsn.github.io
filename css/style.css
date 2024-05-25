@@ -269,7 +269,6 @@ h3 {
 }
 
 .dropdown {
-    text-decoration: underline;
     display: flex;
     flex-direction: column;
     min-width: 250px;
