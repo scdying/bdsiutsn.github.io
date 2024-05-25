@@ -461,7 +461,8 @@ button:focus {
 }
 
 .post .post-title a {
-    color: #203656;
+    color: inherit;
+    /*#203656*/
 }
 
 .post .post-title a:hover {
@@ -1297,6 +1298,7 @@ footer .footer-inner .copyright {
 }
 
 p {
+    color: inherit;
     margin-top: 0;
     margin-bottom: 1rem;
     font-size: 1em;
