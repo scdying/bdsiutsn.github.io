@@ -461,7 +461,7 @@ button:focus {
 }
 
 .post .post-title a {
-    color: inherit;
+    color: white;
     /*#203656*/
 }
 
@@ -1298,7 +1298,7 @@ footer .footer-inner .copyright {
 }
 
 p {
-    color: inherit;
+    color: white;
     margin-top: 0;
     margin-bottom: 1rem;
     font-size: 1em;
