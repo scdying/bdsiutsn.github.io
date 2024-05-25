@@ -60,7 +60,7 @@ a {
 }
 
 a:hover {
-    color: #203656;
+    color: white;
 }
 
 a:focus {
@@ -248,7 +248,7 @@ button:focus {
 }
 
 .canvas-menu .vertical-menu li.openmenu>a {
-    color: #203656;
+    color: white;
 }
 
 .canvas-menu .vertical-menu li.openmenu .switch {
@@ -263,7 +263,7 @@ button:focus {
 }
 
 .canvas-menu .vertical-menu li a {
-    color: #203656;
+    color: white;
     font-family: "Poppins", sans-serif;
     font-size: 14px;
     font-weight: 400;
@@ -291,7 +291,7 @@ button:focus {
 }
 
 .canvas-menu .vertical-menu li.active .submenu a:hover {
-    color: #203656;
+    color: white;
 }
 
 .canvas-menu .submenu {
@@ -474,7 +474,7 @@ button:focus {
 }
 
 .post .post-title a {
-    color: #203656;
+    color: white;
 }
 
 .post .post-title a:hover {
