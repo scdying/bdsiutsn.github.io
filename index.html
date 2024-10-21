@@ -68,8 +68,32 @@
                     <ul class="menu-bar">
                         <li><a class="nav-link" href="#">Accueil</a></li>
                         <li><a class="nav-link" href="/presentation">Le Bureau</a></li>
-                        <li><a class="nav-link" href="/evenements" style="color: #fff;">Événements</a></li>
-
+                        <!--<li><a class="nav-link" href="/evenements" style="color: #fff;">Événements</a></li>-->
+                        <li>
+                            <button class="nav-link dropdown-btn" data-dropdown="dropdown1" aria-haspopup="true"
+                                aria-expanded="false" aria-label="discover" style="color: #fff;">
+                                Événements
+                            </button>
+                            <div id="dropdown1" class="dropdown">
+                                <ul role="menu">
+                                    <li role="menuitem">
+                                        <a class="dropdown-link" href="/evenements" style="color: #fff; text-decoration: none;">Tous les événements</a>
+                                    </li>
+                                    <li role="menuitem">
+                                        <a class="dropdown-link" href="https://www.helloasso.com/associations/bureau-des-sports-iut-saint-nazaire/evenements/tournoi-futsal-1"
+                                            style="color: #fff; text-decoration: none;">Tournoi Futsal</a>
+                                    </li>
+                                    <li role="menuitem">
+                                        <a class="dropdown-link" href="https://www.helloasso.com/associations/bureau-des-sports-iut-saint-nazaire/evenements/tournoi-volley-ball-1"
+                                            style="color: #fff; text-decoration: none;">Tournoi Volley-ball</a>
+                                    </li>
+                                    <li role="menuitem">
+                                        <a class="dropdown-link" href="https://www.helloasso.com/associations/bureau-des-sports-iut-saint-nazaire/evenements/tournoi-basket-ball"
+                                            style="color: #fff; text-decoration: none;">Tournoi Basket-ball</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
                         <li>
                             <button class="nav-link dropdown-btn" data-dropdown="dropdown1" aria-haspopup="true"
                                 aria-expanded="false" aria-label="discover" style="color: #fff;">
