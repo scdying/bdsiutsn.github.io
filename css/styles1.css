@@ -417,7 +417,7 @@ button:focus {
 
 .hero::after {
     content: "";
-    background: #203656;
+    background: #fff;
     display: block;
     left: 0;
     opacity: 0.8;
@@ -571,7 +571,7 @@ button:focus {
 
 .featured-post-lg .thumb::after {
     content: "";
-    background: #203656;
+    background: #fff;
     display: block;
     height: 100%;
     left: 0;
@@ -913,7 +913,7 @@ button:focus {
 
 .post.post-over-content .thumb::after {
     content: "";
-    background: #203656;
+    background: #fff;
     display: block;
     height: 100%;
     left: 0;

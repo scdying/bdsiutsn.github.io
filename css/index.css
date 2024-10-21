@@ -296,7 +296,7 @@ body {
 
 .post.post-over-content .thumb::after {
     content: "";
-    background: #203656;
+    background: #fff;
     display: block;
     height: 100%;
     left: 0;
